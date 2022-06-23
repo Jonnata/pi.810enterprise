@@ -1,8 +1,12 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
-a {
-  color: #00B7FF;
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+body {
+  font-family: 'RocknRoll One', sans-serif;
+  box-sizing: border-box;
 }

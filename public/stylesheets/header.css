@@ -1,0 +1,134 @@
+
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 165.59px;
+    left: 0px;
+    top: -2.59px;
+    background: #323050;
+}
+
+header div img {
+    position: absolute;
+    width: 199px;
+    height: 97px;
+    left: 43px;
+    top: 26px;
+    background-blend-mode: lighten;
+    filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
+header a {
+    position: absolute;
+    width: 616px;
+    height: 23.08px;
+    left: 284px;
+    top: 21.49px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul li{
+    top: 120px;
+
+    display: flex;
+    position: relative;
+    
+    color: #FFFFFF;
+}
+
+  
+  /* Style the search field */
+  form.navSearch input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 570px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 58.63px;
+    left: 285px;
+  }
+  
+  /* Style the submit button */
+  form.navSearch button {
+    float: left;
+    width: 35px;
+    padding: 10px;
+    color: #323050;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    height: 42.5px;
+    left: 855px;
+    top: 58.5px;
+    position: absolute;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+.iconeMinhaConta {
+  position: absolute;
+  width: 208px;
+  height: 44.46px;
+  left: 916px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+.iconeMinhaConta h1 {
+    height: 26px;
+    left: 10px;
+    top: 86.73px;
+    font-weight: 400;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.iconeCarrinho{
+  position: absolute;
+  height: 43.46px;
+  left: 1239px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconeCarrinho h2 {
+  height: 1px;
+  left: 10px;
+  top: 87.73px;
+  font-weight: 400;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}

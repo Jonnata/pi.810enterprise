@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='./stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel='stylesheet' href='./stylesheets/style.css' />
+  <link rel='stylesheet' href='../stylesheets/header.css' />
+  <link rel='stylesheet' href='../stylesheets/section.css' />
+</head>
+<body>
+  <!-- menu -->
+  <header>
+    
+    <div class="logo">
+    <img src="./images/logo-810enterPrise.png" alt="Logo 810 enterPrise" />
+    </div>
+
+    <a>Bem vindo(a), <strong>Visitante!</strong></a>
+
+<!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+      <form class="navSearch" action="action_page">
+        <input type="text" placeholder="Busque seu produto" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+    <nav class="navbar">
+      <ul>
+          <li>Ofertas</li>
+          <li>Games</li>
+          <li>Músicas</li>
+          <li>Filmes</li>
+          <li>Moda</li>
+          <li>Esportes</li>
+      </ul>
+    </nav>
+    
+    <nav class="iconeMinhaConta">
+    <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
+    <h1>MINHA CONTA</h1>
+    </nav>
+
+    <nav class="iconeCarrinho">
+    <img src = "./images/Carrinho.svg" alt = "Ícone Carrinho de Compra" />
+    <h2>MEUS PEDIDOS</h2>
+    </nav>
+
+  </header>
+
+  <section class="bannerCentral">
+    <img src="./images/bannerCards.png" alt="BannerCards" 
+    style=
+      "max-width: 962px;
+      max-height: 403px;
+      width: auto;
+      height: auto;"/>
+
+    <img src="./images/bannerUber.png" alt="BannerUber" 
+    style=
+      "max-width: 467px;
+      max-height: 208px;
+      width: auto;
+      height: auto;"/>
+    
+    <img src="./images/BannerCeA.png" alt="BannerCeA" 
+    style=
+      "max-width: 467px;
+      max-height: 216px;
+      width: auto;
+      height: auto;"/>	
+  </section>
+
+  <!-- <footer>
+    <article class="about">
+      <img src="./images/" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+      </p>
+    </article>
+
+    <article class="cetegories">
+      <h6>Categorias</h6>
+      <ul>
+        <li>Categorias</li>
+        <li>Categorias</li>
+        <li>Categorias</li>
+        <li>Categorias</li>
+        <li>Categorias</li>
+      </ul>
+    </article>
+
+    <article class="institucional">
+      <h6>Institucional</h6>
+      <ul>
+        <li>sobre nós</li>
+        <li>perguntas frequentes</li>
+        <li>política de privacidade</li>
+        <li>rastreamento de pedidos</li>
+        <li>trabalhe conosco</li>
+        <li>contato</li>
+      </ul>
+    </article>
+  </footer> -->
+  
+</body>
 </html>
