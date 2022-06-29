@@ -1,74 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <link rel='stylesheet' href='./stylesheets/style.css' />
-  <link rel='stylesheet' href='../stylesheets/header.css' />
-  <link rel='stylesheet' href='../stylesheets/sectionBannerCentral.css' />
-  <link rel='stylesheet' href='../stylesheets/footer.css' />
-  <link rel='stylesheet' href='../stylesheets/sectionVantagens.css' />
-  <link rel='stylesheet' href='../stylesheets/articleOfertas.css' />
-  <link rel='stylesheet' href='../stylesheets/divSlider.css' />
-  <link rel='stylesheet' href='../stylesheets/navMenu.css' />
-  <link rel='stylesheet' href='../stylesheets/logo.css' />
-</head>
+  <%- include('./partials/head') %>
   <body>
     <!-- menu -->
-    <header>
-      
-      <div class="logo">
-      <img src="./images/logo-810enterPrise.png" alt="Logo 810 enterPrise" />
-      </div>
+    <%- include('./partials/header') %>
 
-      <a>Bem vindo(a), <strong>Visitante!</strong></a>
-
-  <!-- Load icon library -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- The form -->
-        <form class="navSearch" action="action_page">
-          <input type="text" placeholder="Busque seu produto" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      
-      <nav class="iconeMinhaConta">
-      <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
-      <h1>MINHA CONTA</h1>
-      </nav>
-
-      <nav class="iconeCarrinho">
-      <img src = "./images/Carrinho.svg" alt = "Ícone Carrinho de Compra" />
-      <h2>MEUS PEDIDOS</h2>
-      </nav>
-
-    </header>
-
-    <nav class="menu">
-      <ol>
-        <li class="menu-item"><a href="#0">Home</a></li>
-        <li class="menu-item"><a href="#0">Sobre</a></li>
-        <li class="menu-item">
-          <a href="#0">Categorias</a>
-          <ol class="sub-menu">
-            <li class="menu-item"><a href="#0">Games</a></li>
-            <li class="menu-item"><a href="#0">Músicas</a></li>
-            <li class="menu-item"><a href="#0">Filmes</a></li>
-          </ol>
-        </li>
-        <li class="menu-item">
-          <a href="#0">Ofertas da Semana</a>
-          <ol class="sub-menu">
-            <li class="menu-item"><a href="#0">15% OFF</a></li>
-            <li class="menu-item"><a href="#0">25% OFF</a></li>
-            <li class="menu-item"><a href="#0">35% OFF</a></li>
-          </ol>
-        </li>
-        <li class="menu-item"><a href="#0">Contato</a></li>
-      </ol>
-    </nav>
+    <%- include('./partials/navMenu') %>
 
     <section class="bannerCentral">
       <img src="./images/bannerCards.png" alt="BannerCards" 
@@ -307,23 +244,8 @@
         </div>
       </div>
     </div>
-    
 
-    <footer>
-      
-      <article class="institucional">
-        <ul>
-          <li>ATENDIMENTO -</li>
-          <li>TERMOS DE USO -</li>
-          <li>PRAZO DE ENTREGA -</li>
-          <li>POLÍTICA DE PRIVACIDADE -</li>
-          <li>SEGURANÇA</li>
-        </ul>
-
-        <p>Todos os direitos reservados &copy; 2022 - 810 enterPrise</p>
-      </article>
-      
-    </footer>
+    <%- include('./partials/footer') %>
     
   </body>
 </html>
