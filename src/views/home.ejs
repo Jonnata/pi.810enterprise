@@ -11,6 +11,8 @@
   <link rel='stylesheet' href='../stylesheets/footer.css' />
   <link rel='stylesheet' href='../stylesheets/sectionVantagens.css' />
   <link rel='stylesheet' href='../stylesheets/articleOfertas.css' />
+  <link rel='stylesheet' href='../stylesheets/divSlider.css' />
+  <link rel='stylesheet' href='../stylesheets/navMenu.css' />
 </head>
   <body>
     <!-- menu -->
@@ -30,17 +32,6 @@
           <input type="text" placeholder="Busque seu produto" name="search">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-
-      <nav class="navbar">
-        <ul>
-            <li>Ofertas</li>
-            <li>Games</li>
-            <li>Músicas</li>
-            <li>Filmes</li>
-            <li>Moda</li>
-            <li>Esportes</li>
-        </ul>
-      </nav>
       
       <nav class="iconeMinhaConta">
       <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
@@ -54,25 +45,50 @@
 
     </header>
 
+    <nav class="menu">
+      <ol>
+        <li class="menu-item"><a href="#0">Home</a></li>
+        <li class="menu-item"><a href="#0">Sobre</a></li>
+        <li class="menu-item">
+          <a href="#0">Categorias</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><a href="#0">Games</a></li>
+            <li class="menu-item"><a href="#0">Músicas</a></li>
+            <li class="menu-item"><a href="#0">Filmes</a></li>
+          </ol>
+        </li>
+        <li class="menu-item">
+          <a href="#0">Ofertas da Semana</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><a href="#0">15% OFF</a></li>
+            <li class="menu-item"><a href="#0">25% OFF</a></li>
+            <li class="menu-item"><a href="#0">35% OFF</a></li>
+          </ol>
+        </li>
+        <li class="menu-item"><a href="#0">Contato</a></li>
+      </ol>
+    </nav>
+
+
     <section class="bannerCentral">
       <img src="./images/bannerCards.png" alt="BannerCards" 
       style=
-        "max-width: 962px;
-        max-height: 403px;
+        "max-width: 1000px;
+        max-height: 450px;
         width: auto;
         height: auto;"/>
 
       <img src="./images/bannerUber.png" alt="BannerUber" 
       style=
-        "max-width: 467px;
-        max-height: 208px;
+        "max-width: 500px;
+        max-height: 250px;
         width: auto;
         height: auto;"/>
       
       <img src="./images/BannerCeA.png" alt="BannerCeA" 
       style=
-        "max-width: 467px;
-        max-height: 216px;
+        "max-width: 500px;
+        max-height: 250px;
         width: auto;
         height: auto;"/>	
     </section>
@@ -88,16 +104,79 @@
 
     <article class="ofertas-da-semana">
       <h3>Ofertas da semana</h3>
-          
-          <div class="card-uber">
-            <div class="image-card">
-              <img src="./images/card-uber.png" alt="card-uber" />
-            </div>
-            <h4>Gift Card Digital Uber <strike>R$310,00</strike></h4>
-            <h2>R$300,00</h3>
-          </div>
+
+      <div class="container-cards-scroll">
+      <div class="container">
+        <div class="box">  
+        <div class="card-uber">
+              <div class="image-card">
+                <img src="./images/card-uber.png" alt="card-uber" />
+              </div>
+                <h4>Gift Card Digital Uber <strike>R$310,00</strike></h4>
+                <h2>R$300,00</h3>
+        </div>
+      </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>  
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>  
+      </div>
+    </div>
 
     </article>
+
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
+    
 
     <footer>
       <article class="about">

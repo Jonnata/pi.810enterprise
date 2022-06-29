@@ -14,3 +14,7 @@ section div {
     flex-direction: row;
     white-space: break-spaces;
 }
+
+.vantagens-dos-produtos div :hover {
+    color: red;
+}  
