@@ -1,3 +1,25 @@
 footer {
-    padding: 650px 0 24px;
+    position: absolute;
+    width: 1440px;
+    height: 110px;
+    left: 0px;
+    top: 914px;    
+}
+
+.institucional ul{
+    position: absolute;
+    width: 187px;
+    height: 26px;
+    left: 24px;
+    top: 984px;
+    
+    font-family: 'RocknRoll One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    
+    text-align: center;
+    
+    color: #5D8A66;
 }
