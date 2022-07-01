@@ -19,7 +19,7 @@ border-radius: 20px;
     flex-direction: column-reverse;
 }
 
-h3 {
+.giftcards-que-amamos h3 {
     position: absolute;
     left: 100px;
     font-weight: 400;
