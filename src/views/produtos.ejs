@@ -8,19 +8,19 @@
   
     <%- include('./partials/navMenu') %>
 
-    <section>
-      <div class="giftcards-que-amamos">Gift Cards que amamos</div>
+    <div class="giftcards-que-amamos">
+      <h3>Gift Cards que amamos</h3>
+    </div>
 
+    <section class="produtos">
       <% produtos.forEach((produtos) => { %>
-        <div class="giftcards-produtos">
-            <a href="/produtos/<%= produtos.id %>">
-              <img src="/images/produtos/<%= produtos.image %>" alt="imagem do produto">
-            </a>
-        </div>
-      <% }) %>
-
-    </section>
-
+      <div class = "produtos-interno">
+      <a href="/produtos/<%= produtos.id %>">
+        <img src="/images/produtos/<%= produtos.image %>" alt="imagem do produto">
+      </a>
+      </div>
+        <% }) %>
+    </section> 
     <%- include('./partials/footer') %>
 
     </main>
