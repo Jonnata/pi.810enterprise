@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name": "Gift Card Digital Steam",
+        "price": 105,
+        "image":"card-steam.png"
+    },
+    {
+        "id":2,
+        "name": "Gift Card Digital Ifood",
+        "price": 40,
+        "image": "card-ifood.png"
+    },
+    {
+        "id":3,
+        "name": "Gift Card Google Play",
+        "price":15,
+        "image": "card-gplay.png"
+    },
+    {
+        "id":4,
+        "name": "Gift Card Uber",
+        "price":300,
+        "image": "card-uber.png"
+    }
+]
