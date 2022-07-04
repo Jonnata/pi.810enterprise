@@ -1,16 +1,55 @@
 .vantagens-dos-produtos {
-    position: absolute;
-    width: 100%;
-    height: 94px;
-    left: 0px;
-    top: 583px;
-    font-size: 26px;
-    line-height: 32px;
-    color: rgba(50, 48, 80, 0.84);
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 94px;
+  left: 0px;
+  top: 608px;
+  font-size: 21px;
+  line-height: 32px;
+  color: rgba(50, 48, 80, 0.84);
+  text-align: center;
 }
 section div {
     display: inline-flex;
     flex-direction: row;
     white-space: break-spaces;
 }
+
+.vantagens-dos-produtos div div :hover {
+    color: red;
+}  
+
+.slider-vantagens {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  }
+  .slider-vantagens::before, .slider-vantagens::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider-vantagens::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider-vantagens::before {
+    left: 0;
+    top: 0;
+  }
+  .slider-vantagens .slide-track-vtgs {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+  }
+  .slider-vantagens .slide-nomenclature {
+    height: 100px;
+    width: 250px;
+  }

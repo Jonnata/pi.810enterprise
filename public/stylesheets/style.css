@@ -7,4 +7,7 @@
 body {
   font-family: 'RocknRoll One', sans-serif;
   box-sizing: border-box;
+  display: contents;
+  margin: 0;
+  padding: 0;
 }

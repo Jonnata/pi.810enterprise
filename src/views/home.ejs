@@ -1,213 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <link rel='stylesheet' href='./stylesheets/style.css' />
-  <link rel='stylesheet' href='../stylesheets/header.css' />
-  <link rel='stylesheet' href='../stylesheets/sectionBannerCentral.css' />
-  <link rel='stylesheet' href='../stylesheets/footer.css' />
-  <link rel='stylesheet' href='../stylesheets/sectionVantagens.css' />
-  <link rel='stylesheet' href='../stylesheets/articleOfertas.css' />
-</head>
+  <%- include('./partials/head') %>
   <body>
     <!-- menu -->
-    <header>
-      
-      <div class="logo">
-      <img src="./images/logo-810enterPrise.png" alt="Logo 810 enterPrise" />
-      </div>
+    <%- include('./partials/header') %>
 
-      <a>Bem vindo(a), <strong>Visitante!</strong></a>
-
-  <!-- Load icon library -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- The form -->
-        <form class="navSearch" action="action_page">
-          <input type="text" placeholder="Busque seu produto" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-
-      <nav class="navbar">
-        <ul>
-            <li>Ofertas</li>
-            <li>Games</li>
-            <li>Músicas</li>
-            <li>Filmes</li>
-            <li>Moda</li>
-            <li>Esportes</li>
-        </ul>
-      </nav>
-      
-      <nav class="iconeMinhaConta">
-      <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
-      <h1>MINHA CONTA</h1>
-      </nav>
-
-      <nav class="iconeCarrinho">
-      <img src = "./images/Carrinho.svg" alt = "Ícone Carrinho de Compra" />
-      <h2>MEUS PEDIDOS</h2>
-      </nav>
-
-    </header>
+    <%- include('./partials/navMenu') %>
 
     <section class="bannerCentral">
       <img src="./images/bannerCards.png" alt="BannerCards" 
       style=
-        "max-width: 962px;
-        max-height: 403px;
+        "max-width: 1000px;
+        max-height: 450px;
         width: auto;
         height: auto;"/>
 
       <img src="./images/bannerUber.png" alt="BannerUber" 
       style=
-        "max-width: 467px;
-        max-height: 208px;
+        "max-width: 500px;
+        max-height: 250px;
         width: auto;
         height: auto;"/>
       
       <img src="./images/BannerCeA.png" alt="BannerCeA" 
       style=
-        "max-width: 467px;
-        max-height: 216px;
+        "max-width: 500px;
+        max-height: 250px;
         width: auto;
         height: auto;"/>	
     </section>
 
     <section class="vantagens-dos-produtos">
-    <div>    
-      <h3>Diversos produtos para você escolher</h3>
-      <h3>Facilidade para usar o crédito</h3>
-      <h3>Solução prática para você</h3>
-      <h3>Presente especial para um amigo</h3>
+    <div class="slider-vantagens">
+      <div class="slide-track-vtgs">
+        <div class="slide-nomenclature">
+          <h3>Diversos produtos para você escolher</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Facilidade para usar o crédito</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Solução prática para você</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Presente especial para um amigo</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Diversos produtos para você escolher</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Facilidade para usar o crédito</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Solução prática para você</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Presente especial para um amigo</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Diversos produtos para você escolher</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Facilidade para usar o crédito</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Solução prática para você</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Presente especial para um amigo</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Diversos produtos para você escolher</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Facilidade para usar o crédito</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Solução prática para você</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Presente especial para um amigo</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Diversos produtos para você escolher</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Facilidade para usar o crédito</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Solução prática para você</h3>
+        </div>
+        <div class="slide-nomenclature">
+          <h3>Presente especial para um amigo</h3>
+        </div>
+        
+      </div>
     </div>
     </section>
 
     <article class="ofertas-da-semana">
       <h3>Ofertas da semana</h3>
-          
-          <div class="card-uber">
+
+      <div class="container-cards-scroll">
+      <div class="container">
+        <div class="box">  
+        <div class="card-uber">
+              <div class="image-card">
+                <img src="./images/card-uber.png" alt="card-uber" />
+              </div>
+                <h4>Gift Card Digital Uber <strike>R$310,00</strike></h4>
+                <h2>R$300,00</h3>
+        </div>
+      </div>
+        <div class="box">
+          <div class="card-ps">
             <div class="image-card">
-              <img src="./images/card-uber.png" alt="card-uber" />
+              <img src="./images/card-ps.png" alt="card-ps" />
             </div>
-            <h4>Gift Card Digital Uber <strike>R$310,00</strike></h4>
-            <h2>R$300,00</h3>
+              <h4>Gift Card PlayStation <strike>R$220,00</strike></h4>
+              <h2>R$190,00</h3>
           </div>
+        </div>
+        <div class="box">
+          <div class="card-assai">
+            <div class="image-card">
+              <img src="./images/card-assai.png" alt="card-assai" />
+            </div>
+              <h4>Gift Card Assaí <strike>R$100,00</strike></h4>
+              <h2>R$95,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-steam">
+            <div class="image-card">
+              <img src="./images/card-steam.png" alt="card-steam" />
+            </div>
+              <h4>Gift Card Steam <strike>R$120,00</strike></h4>
+              <h2>R$105,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-gplay">
+            <div class="image-card">
+              <img src="./images/card-gplay.png" alt="card-gplay" />
+            </div>
+              <h4>Gift Card Google Play <strike>R$20,00</strike></h4>
+              <h2>R$15,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-ifood">
+            <div class="image-card">
+              <img src="./images/card-ifood.png" alt="card-ifood" />
+            </div>
+              <h4>Gift Card Digital Ifood <strike>R$250,00</strike></h4>
+              <h2>R$200,00</h3>
+          </div>
+        </div>  
+        <div class="box">
+          <div class="card-netflix">
+            <div class="image-card">
+              <img src="./images/card-netflix.png" alt="card-netflix" />
+            </div>
+              <h4>Gift Card Netflix <strike>R$95,00</strike></h4>
+              <h2>R$70,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-spotify">
+            <div class="image-card">
+              <img src="./images/card-spotify.png" alt="card-spotify" />
+            </div>
+              <h4>Gift Card Spotify <strike>R$50,00</strike></h4>
+              <h2>R$40,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-tinder">
+            <div class="image-card">
+              <img src="./images/card-tinder.png" alt="card-tinder" />
+            </div>
+              <h4>Gift Card Tinder <strike>R$45,00</strike></h4>
+              <h2>R$30,00</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="card-apple">
+            <div class="image-card">
+              <img src="./images/card-apple.png" alt="card-apple" />
+            </div>
+              <h4>Gift Card Apple <strike>R$200,00</strike></h4>
+              <h2>R$150,00</h3>
+          </div>
+        </div>  
+      </div>
+    </div>
 
     </article>
 
-    <footer>
-      <article class="about">
-        <img src="./images/" alt="" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
 
-        </p>
-      </article>
-
-      <article class="cetegories">
-        <h6>Categorias</h6>
-        <ul>
-          <li>Categorias</li>
-          <li>Categorias</li>
-          <li>Categorias</li>
-          <li>Categorias</li>
-          <li>Categorias</li>
-        </ul>
-      </article>
-
-      <article class="institucional">
-        <h6>Institucional</h6>
-        <ul>
-          <li>sobre nós</li>
-          <li>perguntas frequentes</li>
-          <li>política de privacidade</li>
-          <li>rastreamento de pedidos</li>
-          <li>trabalhe conosco</li>
-          <li>contato</li>
-        </ul>
-      </article>
-    </footer>
+    <%- include('./partials/footer') %>
     
   </body>
 </html>

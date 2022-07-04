@@ -1,0 +1,40 @@
+/*.giftcards-produtos {
+position: flex;
+width: 307px;
+height: 278px;
+right: 1033px;
+bottom: 504px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 20px;
+}*/
+
+.giftcards-que-amamos {
+    width: 100%;
+    height: 290px;
+    left: 39px;
+    top: 1267px;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: column-reverse;
+}
+
+.giftcards-que-amamos h3 {
+    position: absolute;
+    left: 100px;
+    font-weight: 400;
+    font-size: 35px;
+    color: #5D8A66;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.produtos-interno {
+    width: 496px;
+    justify-content: center;
+}
