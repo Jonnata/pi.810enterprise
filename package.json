@@ -18,15 +18,5 @@
   },
   "scripts": {
     "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Jonnata/pi.810enterprise.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jonnata/pi.810enterprise/issues"
-  },
-  "homepage": "https://github.com/Jonnata/pi.810enterprise#readme"
+  }
 }
