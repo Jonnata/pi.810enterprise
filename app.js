@@ -9,6 +9,8 @@ var carrinhoRouter = require('./src/routers/carrinhoRouter');
 var homeRouter = require('./src/routers/homeRouter');
 var usersRouter = require('./src/routers/usersRouter');
 var produtosRouter = require('./src/routers/produtosRouter');
+var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
+
 
 var app = express();
 
@@ -22,10 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use('/carrinho', carrinhoRouter);
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use(produtosRouter);
-app.use('/carrinho', carrinhoRouter);
+app.use(produtoInternoRouter);
 
 
 app.use((req, res) => {
