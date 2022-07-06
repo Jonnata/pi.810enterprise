@@ -4,13 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-carrinho-src
 
-var carrinhoRouter = require('./src/routes/carrinho');
+var carrinhoRouter = require('./src/routers/carrinhoRouter');
 var homeRouter = require('./src/routers/homeRouter');
 var usersRouter = require('./src/routers/usersRouter');
 var produtosRouter = require('./src/routers/produtosRouter');
- main
+var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
 
 var app = express();
 
@@ -24,14 +23,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- carrinho-src
-app.use('/carrinho', carrinhoRouter);
 
+app.use('/carrinho', carrinhoRouter);
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use(produtosRouter);
+app.use(produtoInternoRouter);
 
-main
+  
 
 app.use((req, res) => {
   return res.status(404).render('not-found')
