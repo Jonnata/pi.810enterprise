@@ -1,21 +1,16 @@
 {
-  "name": "pi.810enterprise",
-  "version": "1.0.0",
-  "description": "DH Integrator Project, group: 810enterPrise",
-  "main": "app.js",
+  "name": "810enterprise",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "ejs": "^2.6.2",
-    "express": "^4.16.4",
-    "http-errors": "^1.6.3",
-    "morgan": "^1.9.1",
-    "multer": "^1.4.5-lts.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.18"
-  },
-  "scripts": {
-    "start": "nodemon app.js"
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }

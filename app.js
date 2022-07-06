@@ -11,6 +11,7 @@ var usersRouter = require('./src/routers/usersRouter');
 var produtosRouter = require('./src/routers/produtosRouter');
 var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
 
+
 var app = express();
 
 // view engine setup
@@ -30,7 +31,6 @@ app.use('/users', usersRouter);
 app.use(produtosRouter);
 app.use(produtoInternoRouter);
 
-  
 
 app.use((req, res) => {
   return res.status(404).render('not-found')
