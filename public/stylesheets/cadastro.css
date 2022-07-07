@@ -8,11 +8,12 @@ main form input[name="password"] {
     border-radius: 15px;
 }
 
-h4 {
+.cadastrar-headline {
     font-weight: 400;
     font-size: 25px;
     color: #5D8A66;
     font-size: 28px;
+    height: 72px;
 }
 
 .termos a {
@@ -21,7 +22,7 @@ h4 {
     color: #B0A6A6
 }
 
-strong {
+.termos strong, .tem-conta strong {
     color: #5D8A66
 }
 
