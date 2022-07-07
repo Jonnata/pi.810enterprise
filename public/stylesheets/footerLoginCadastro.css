@@ -23,9 +23,14 @@ width: 1800px;
 .atendimento-cli, .sobre, .pg{
     font-size: 13px;
     font-weight: bold;
+    line-height: 1px;
 }
 
 .pagamentos img{
     display: flex;
     margin-left: 46px;
+}
+
+.atendimento, .sobre-810enter, .pagamentos{
+line-height: 7px;
 }
