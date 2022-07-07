@@ -1,0 +1,39 @@
+main form input[type="date"],
+main form input[name="password"] {
+    width: 337px;
+    height: 62px;
+    
+    background: #FFFFFF;
+    border: 5px solid #5D8A66;
+    border-radius: 15px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 25px;
+    color: #5D8A66;
+    font-size: 28px;
+}
+
+.termos a {
+    font-size: 11px;
+    line-height: 18px;
+    color: #B0A6A6
+}
+
+strong {
+    color: #5D8A66
+}
+
+main form .criar {
+    font-family: 'RocknRoll One';
+    font-weight: 400;
+    font-size: 21px;
+    color: #FFFFFF;
+}
+
+.tem-conta a{
+    line-height: 29px;
+    color: #B0A6A6;
+    font-size:15px;
+}

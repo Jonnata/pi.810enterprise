@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <main>
+        <div class="logo">
+            <img src="./images/logo-810enterPrise.png" alt="Logo 810 enterPrise" />
+        </div>
+    
+        <div class="precisa-de-ajuda">
+            <h3>Precisa de ajuda?</h3>
+        </div>
+
+    <div class="faixa"></div>
+      <form action="/cadastrar" method="POST">
+        <h4>Cadastrar</h4>
+
+        <label for="Nome">Primeiro Nome</label>
+        <input placeholder="Insira seu primeiro nome" type="text" name="username" id="username" />
+
+        <label for="Nascimento">Data de Nascimento</label>
+        <input type="date" name="date" id="date" />
+
+        <label for="email">Email</label>
+        <input placeholder="Insira seu melhor e-mail" type="text" name="username" id="username" />
+
+        <label for="senha">Senha</label>
+        <input placeholder="Insira sua senha aqui" type="password" name="senha" id="senha" />
+
+        <div class="termos">
+            <a href="/termos">
+            Ao se inscrever, concorda com políticas da 810 enterPrise 
+            <strong>Termos de Serviço</strong> & <strong>Politica de Privacidade</strong>
+            </a>
+        </div>
+
+        <button class="criar" type="submit">Criar a minha conta</button>
+        <div class="tem-conta">
+        <a href="/login">Tem uma conta? <strong>Entre</strong></a>
+        </div>
+      </form>
+
+      <article class="melhor-plataforma">
+          <h2>Sua melhor plataforma de compras online de GiftCards</h2>
+      </article>
+
+      <%- include('./partials/footerLoginCadastro') %>
+
+    </main>
+  </body>

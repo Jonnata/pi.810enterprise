@@ -80,6 +80,13 @@ main form label {
     cursor: pointer;
   }
 
+  main form .continuar {
+    font-family: 'RocknRoll One';
+    font-weight: 400;
+    font-size: 21px;
+    color: #FFFFFF;
+}
+
 .criar-conta a{
     height: 44px;
     font-size: 19px;
