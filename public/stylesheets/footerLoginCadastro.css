@@ -1,0 +1,31 @@
+.footer-login-cadastro{
+    display: flex;
+    height: 254px;
+    top: 675px;
+    font-style: normal;
+    font-size: 12px;
+    color: #B0A6A6;
+}
+
+.direitos{
+    position: absolute;
+    display: grid;
+    width: 1800px;
+    height: 40px;
+    top: 211px;
+    font-size: 16px;
+}
+
+.direitos img{
+width: 1800px;
+}
+
+.atendimento-cli, .sobre, .pg{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pagamentos img{
+    display: flex;
+    margin-left: 46px;
+}
