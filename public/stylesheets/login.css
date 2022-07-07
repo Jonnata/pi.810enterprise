@@ -1,0 +1,129 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'RocknRoll One';
+  }
+  
+  main form {
+    max-width: 377px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 10px 20px 4px rgb(0 0 0 / 25%);
+    padding: 20px;
+  }
+
+.faixa {
+    position: fixed;
+    width: 1500vh;
+    height: 480px;
+    background: #323050;
+    filter: blur(13px);
+    transform: rotate(32.09deg);
+}
+
+form h5 {
+    font-weight: 400;
+    font-size: 19px;
+    color: #5D8A66;
+}
+
+main form input[type="text"],
+main form input[type="password"] {
+    width: 337px;
+    height: 62px;
+    
+    background: #FFFFFF;
+    border: 5px solid #5D8A66;
+    border-radius: 15px;
+}
+label[for="password"] {
+    margin-top: 25px;
+
+}
+
+main form label {
+    align-self: flex-start;
+    margin-bottom: 2px;
+    font-weight: 300;
+    color: #5D8A66;
+  }
+
+.form-group {
+    font-size: 12px;
+    color: #5D8A66;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  main form button {
+    margin-top: 25px;
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 15px;
+    color: #FFF;
+    background: #5D8A66;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+.criar-conta a{
+    height: 44px;
+    font-size: 19px;
+    line-height: 38px;
+    color: #B0A6A6;
+    justify-content: center;
+}
+
+.criar-conta :hover {
+    color: #5D8A66;
+    font-size: 24px;
+    transition: all ease-in .5s;
+  }
+
+.esqueci-senha a{
+    font-size: 13px;
+    color: #5D8A66;
+}
+
+.logo {
+    align-self: flex-start;
+    display: flex;
+    z-index: 5;
+    margin-inline-end: auto;
+    margin-left: 20px;
+    margin-top: 33px;
+    align-self: flex-start;
+}
+
+.precisa-de-ajuda{
+    width: 188px;
+    font-size: 14px;
+    color: #323050;
+    margin-left: 20px;
+    margin-top: 33px;
+    align-self: flex-start;
+}
+
+.melhor-plataforma{
+    position: absolute;
+    width: 501px;
+    height: 101px;
+    left: 30px;
+    top: 515px;
+    font-size: 22px;
+    color: #5D8A66;
+}
