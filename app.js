@@ -12,6 +12,7 @@ var produtosRouter = require('./src/routers/produtosRouter');
 var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
 var loginRouter = require('./src/routers/loginRouter');
 var cadastroRouter = require('./src/routers/cadastroRouter');
+var painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
 
 
 var app = express();
@@ -34,6 +35,7 @@ app.use(produtosRouter);
 app.use(produtoInternoRouter);
 app.use(loginRouter);
 app.use(cadastroRouter);
+app.use(painelUsuarioRouter);
 
 
 app.use((req, res) => {
