@@ -1,0 +1,21 @@
+.footer-painel-usuario{
+    width: 100%;
+    display: flex;
+    line-height: 23px;
+    color: #5D8A66;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+
+}
+
+.footer-line img {
+    width: 1305px;
+    height: 0px;
+
+    border: 1px solid #5D8A66;
+}
+
+.atendimento-footer-painel {
+    display: flex;
+}

@@ -8,20 +8,59 @@
         <%- include('./partials/navMenu') %>
 
         <aside class="aside-menu" >
-            <div class="avatar">
-                <img src="./images/" alt="avatar" />
-            </div>
             
-            <div class="nome-usuario">
-                <h1>Jonnata Costa</h1>
-                linha
+            <div class="avatar">
+                <img src="./images/painelUsuario/avatar.png" alt="avatar" />
+            
+                <div class="nome-usuario">
+                    <h1>Jonnata Costa</h1>
+
+                    <img class="linha-nome-avatar" src="./images/painelUsuario/linha-avatar.png" alt="linha-nome-avatar" />
+                
+                </div>
             </div>
 
             <div class="menu-lateral">
-                <div class="MEUCADASTRO">MEU CADASTRO</div>
-                <div class="PEDIDOS">PEDIDOS</div>
-                <div class="GARANTIA">GARANTIA</div>
-                <div class="ARREPENDIMENTO">ARREPENDIMENTO</div>
+
+                <div class="meucadastro">
+                    <a href="">
+                        <img src="./images/painelUsuario/meuCadastro.svg" alt="Meu cadastro" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        MEU CADASTRO
+                        
+                    </a>
+                </div>
+
+                <div class="pedidos">
+                    <a href="">
+                        <img src="./images/painelUsuario/pedidos.svg" alt="Pedidos" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                       
+                        PEDIDOS
+
+                    </a>
+                </div>
+
+                <div class="garantia">
+                    <a href="">
+                        <img src="./images/painelUsuario/garantia.svg" alt="Garantia" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        GARANTIA
+
+                    </a>
+                </div>
+
+                <div class="arrependimento">
+                    <a href="">
+                        <img src="./images/painelUsuario/arrependimento.svg" alt="Arrependimento" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        ARREPENDIMENTO
+
+                    </a>
+                </div>
             </div>
 
             <div class="atendimento-cli">
@@ -32,7 +71,7 @@
 
         </aside>
 
-        <%- include('./partials/footer') %>
+        <%- include('./partials/footerPainelUsuario') %>
 
 </body>
 </html>
