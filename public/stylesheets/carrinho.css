@@ -18,20 +18,53 @@ main h1 {
     align-items: center;
   }
 
-section.aproveite-e-leve-tambem .products-row {
+section.aproveite-e-leve-tambem  {
     display:flex;
     justify-content: space-between;
     position: relative;
+    flex-direction: column;
+}
+.products-row{
+    width: 285px;
+    height: 153px;
+    margin-left: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
   }
+
+  .imageProduto .slider button{
+    background-color: #DFD7D7;
+    border-radius: 50px;
+    width: 94px;
+    height: 100px;
+    opacity: 0.8;
+    position:relative;
+    flex-direction:row;
+    border: none;
+    cursor: pointer;
+    transform: translate(-115%,0%);
+    margin-right: -100px;
+  }
+
+  .slider button:hover{
+    background-color: #AA9D9D ;
+  }
+
 .imageProduto {
-    width: 285px;
+    max-width: 300px;
     height: 150px;
     background: #EBEBEB;  
-  }
+    border-radius: 10px;
+    display: flex;
+    filter: drop-shadow(5px 1px 2px #a59999);
+    margin-right: 100px;
+}
 .imageProduto .img{
-  width: 85px;
+  max-width: 400px;
   height: 56px;
+  display: flex;
 }
 .imageProduto section{
   align-items:center;
@@ -51,8 +84,6 @@ section.aproveite-e-leve-tambem .products-row {
   text-align: center;
   flex-direction: column;
 }
-
-
 .minha-cesta h1{
   text-align: justify;
     margin-left: 56px;
@@ -61,47 +92,64 @@ section.aproveite-e-leve-tambem .products-row {
     font-weight: 400;
     text-transform: lowercase;
     color: #5D8A66;
+   
+}
+.divider {
+  background-color: #EBEBEB;
+  margin-top: 50px;
+  width: 1200px;
+  height: 0px;
+  border: 0.5px solid #EBEBEB;
+  display: flex;
 }
 .minha-cesta{
   display:flex;
-  justify-content: space-between;
   position: relative;
-}
+  }
 
+.cesta{
+  display: flex;
+  position: relative;
+  margin-top: 40px;
+  margin-left: -200px;
+  width: 974px;
+  height: 243px;
+  justify-content: space-between;
+}
 .cesta h4{
   text-align:justify;
-    margin-left: 61px;
+    margin-left: 0px;
     margin-top: 15px;
     font-size: 18px;
     font-weight: 400;
     text-transform: lowercase;
     color: #000000;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 20px;
+    
     
 }
-.cesta article{
-  display: flex;
+.produtoFinal article{
+  display:flex;
   align-items: center;
   justify-content:space-between;
-    margin-left: -80px;
+    margin-left: 0px;
     margin-top: 70px;
-    
+    flex-direction:row;
 }
-.divider {
-  background-color: #EBEBEB;
-  margin-top: 0px;
-  width: 100%;
-  border: 0.5px solid #EBEBEB;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .resumoFinal {
   display: flex;
   width: 328px;
   height: 450px;
   background-color: #EBEBEB;
-  margin-left: 939px ;
-  margin-top: -180px;
+  margin-left: 120px ;
+  margin-top: 0px;
+    position: relative;
+  flex-direction: column;
 }
 
 .resumoFinal h2{
@@ -112,6 +160,7 @@ section.aproveite-e-leve-tambem .products-row {
     font-weight: 400;
     text-transform: lowercase;
     color: #5D8A66;
+    display: flex;
 }
 .resumoFinal p{
   text-align: justify;
@@ -120,6 +169,7 @@ section.aproveite-e-leve-tambem .products-row {
   font-weight: 400;
   text-transform: lowercase;
   color: #807C7C;
+  display: flex;
 }
 .dividerResumo {
   background-color: #EBEBEB;
@@ -140,7 +190,7 @@ section.aproveite-e-leve-tambem .products-row {
   text-transform: lowercase;
   color:#000000;
 }
-button {
+.resumoFinal button {
 width: 290px;
 height: 60px;
 margin-top: 10px;
