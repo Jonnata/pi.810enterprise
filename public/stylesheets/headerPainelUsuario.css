@@ -1,0 +1,64 @@
+.painel-usuario {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: #323050;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-header-painel-usuario {
+    display: flex;
+    height: 108px;
+}
+
+.logo-painel-user{
+    position: relative;
+    top: 7px;
+}
+
+.nav-search{
+    display: flex;
+    background: #FFFFFF;
+}
+
+.lupa-painel-usuario {
+    width: 30px;
+}
+
+form.nav-Search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 864px;
+    background: #f1f1f1;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Style the submit button */
+  form.nav-Search button {
+    float: left;
+    width: 35px;
+    padding: 4px;
+    color: #323050;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 42.5px;
+    left: 855px;
+    top: 58.5px;
+  }
+
+.avatar-header-painel {
+  display: flex;
+  align-items: center;
+}
+
+.nome-avatar-header-painel {
+    font-size: 19px;
+    color: #FFFFFF;
+    padding: 0 0 0 9px
+}
