@@ -1,9 +1,9 @@
 .aside-menu{
-    margin: 198px 0 8px 0;
+    margin: 106px 0px 11px -6px;
     width: 319px;
-    height: 647px;
+    height: 747px;
     display: flex;
-    top: 200px;
+    top: 233px;
     background: #EEEEEE;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 20px;
@@ -62,4 +62,35 @@
 
 .menu-lateral img {
     height: 26px;
+}
+
+.atendimento-suporte {
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0px 23px;
+}
+
+.atdmento {
+    font-size: 20px;
+    color: #5D8A66;
+}
+
+.canal-sac {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 6px 0 0 0
+}
+
+.telefone {
+    font-size: 11px;
+}
+
+.email-atdmento {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 6px 0 0 0
+}
+
+.email-sup {
+    font-size: 11px;
 }
