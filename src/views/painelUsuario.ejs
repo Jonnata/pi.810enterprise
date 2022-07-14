@@ -2,6 +2,7 @@
 <html lang="en">
   <%- include('./partials/head') %>
   <body>
+    <div class="main-painel-user" >
         <!-- menu -->
         <%- include('./partials/headerPainelUsuario') %>
 
@@ -71,7 +72,72 @@
 
         </aside>
 
-        <%- include('./partials/footerPainelUsuario') %>
+        <div class="centro-painel-usuario">
 
+            <div class="minha-conta-meus-pedidos">
+                <div class="minha-conta">
+                    Minha Conta
+                    <p class="text-minha-conta">
+                        Aqui você pode editar seu perfil e verificar seus pedidos.
+                    </p>
+                </div>
+
+                <div class="meus-pedidos">
+                    Meus Pedidos
+                    <p class="txt-meus-pedidos">
+                        Abaixo você encontra todos os detalhes de sobre suas compras.
+                    </p>
+                </div>
+            </div>
+
+            <div class="todos-pedidos-numero">
+                <div class="todos-pedidos">
+                    <div class="tds-pedidos">
+                        Todos os Pedidos
+                    </div>
+
+                    <div class="tds-todos">
+                        <div class="botao-tds">
+                            Todos
+                            <img class="seta-botao-tds" src="./images/painelUsuario/setaParaBaixo.svg" alt="Seta todos" />  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="numero-pedido">
+                    <div class="num-pedido">
+                        Número do Pedido
+                    </div>
+                    <div class="data-pdd">
+                        Data
+                    </div>
+                    <div class="Pag-pdd">
+                        Pagamento
+                    </div>
+                </div>
+            </div>
+
+            <div class="detalhamento-pedidos">
+                <div class="001">
+                    001
+                </div>
+                <div class="detalhes">
+                    + detalhes
+                </div>
+            </div>
+
+            <div class="favoritos">
+                <div class="favoritos-footer">
+                    Favoritos
+                </div>
+                <div class="favoritos-detalhes">
+                    listagem
+                </div>
+            </div>
+
+        </div>
+
+        <%- include('./partials/footerPainelUsuario') %>
+    </div>
 </body>
 </html>
