@@ -1,7 +1,9 @@
 .footer-login-cadastro{
     display: flex;
-    height: 5px;
-    top: 675px;
+    position: fixed;
+    left: -25px;
+    height: 171px;
+    top: 673px;
     font-style: normal;
     font-size: 12px;
     color: #B0A6A6;
