@@ -106,3 +106,5 @@ dist
 package-lock
 package-lock.json
 package.json
+
+config.js
