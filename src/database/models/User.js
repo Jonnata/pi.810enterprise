@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
   
     User.associate = ({  }) => {
       // Tem uma tarefa - Relação HasOne
-      // User.hasOne(models.Tasks, {
+      // User.hasOne(models., {
       //   as: "",
       // });
   

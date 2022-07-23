@@ -13,6 +13,8 @@ var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
 var loginRouter = require('./src/routers/loginRouter');
 var cadastroRouter = require('./src/routers/cadastroRouter');
 var painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
+const logMiddleware = require("./src/middlewares/log");
+
 
 
 var app = express();
@@ -26,6 +28,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(logMiddleware);
+
 
 
 app.use('/carrinho', carrinhoRouter);
