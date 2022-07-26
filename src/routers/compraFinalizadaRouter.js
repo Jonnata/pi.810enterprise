@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const comprafinalizadaController = require('../controllers/compraFinalizadaController');
+const compraFinalizadaController = require('../controllers/compraFinalizadaController');
 
 
-router.get('/comprafinalizada', compraFinalizadaController.renderCompraFinalizada);
+router.get('/compraFinalizada', compraFinalizadaController.renderCompraFinalizada);
 
 module.exports = router;
