@@ -1,8 +1,18 @@
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'RocknRoll One';
+}
+
 main form input[type="date"],
 main form input[name="password"] {
     width: 337px;
     height: 62px;
-    
+    padding: 9px;
     background: #FFFFFF;
     border: 5px solid #5D8A66;
     border-radius: 15px;

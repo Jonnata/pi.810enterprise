@@ -14,6 +14,8 @@ var loginRouter = require('./src/routers/loginRouter');
 var cadastroRouter = require('./src/routers/cadastroRouter');
 var painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
 var compraFinalizadaRouter = require('./src/routers/compraFinalizadaRouter');
+const logMiddleware = require("./src/middlewares/log");
+
 
 
 
@@ -28,6 +30,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(logMiddleware);
+
 
 
 app.use('/carrinho', carrinhoRouter);

@@ -1,4 +1,4 @@
-main {
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ main form input[type="text"],
 main form input[type="password"] {
     width: 337px;
     height: 62px;
-    
+    padding: 9px;
     background: #FFFFFF;
     border: 5px solid #5D8A66;
     border-radius: 15px;

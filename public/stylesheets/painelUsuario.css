@@ -1,9 +1,15 @@
-.aside-menu{
-    margin: 198px 0 8px 0;
-    width: 319px;
-    height: 647px;
+.main-painel-user {
     display: flex;
-    top: 200px;
+    flex-wrap: wrap;
+}
+
+
+.aside-menu{
+    margin: 106px 0px 11px -6px;
+    width: 319px;
+    height: 747px;
+    display: flex;
+    top: 233px;
     background: #EEEEEE;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 20px;
@@ -52,7 +58,7 @@
 
 .menu-lateral a {
     font-size: 18px;
-    background: linear-gradient(180deg, #EBEBEB 10.94%, rgba(255, 255, 255, 0) 66.67%), #5D8A66;
+    background: #FFFFFF;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -62,4 +68,243 @@
 
 .menu-lateral img {
     height: 26px;
+}
+
+.atendimento-suporte {
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0px 23px;
+}
+
+.atdmento {
+    font-size: 20px;
+    color: #5D8A66;
+}
+
+.canal-sac {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 6px 0 0 0
+}
+
+.telefone {
+    font-size: 11px;
+}
+
+.email-atdmento {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 6px 0 0 0
+}
+
+.email-sup {
+    font-size: 11px;
+}
+
+.centro-painel-usuario {
+    display: flex;
+    width: 78%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 0 0 38px;
+    margin: 108px 0 0 0;
+}
+.minha-conta-meus-pedidos {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.minha-conta {
+    font-size: 26px;
+    line-height: 30px;
+    color: #323050;
+    left: 47px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.text-minha-conta {
+    font-size: 17px;
+    line-height: 19px;
+    color: #7F7F7F;
+    position: static;
+    width: 383px;
+}
+
+.meus-pedidos {
+    font-size: 26px;
+    line-height: 30px;
+    color: #5D8A66;
+    left: 47px;
+    position: relative;
+}
+
+.txt-meus-pedidos {
+    font-size: 17px;
+    line-height: 19px;
+    color: #7F7F7F;
+    position: static;
+    width: 383px;
+}
+.conta-pedidos {
+    display: flex;
+    flex-direction: column;
+}
+.botao-Comprar-Mais, .linkbotao {
+    width: 215px;
+    height: 59px;
+    left: 1136px;
+    top: 173px;
+    background: #5D8A66;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0 19px;
+    justify-content: space-evenly;
+    font-size: 27px;
+    color: #FFFFFF;
+}
+
+.comprarMais :hover {
+    background-color: #323050;
+}
+
+.comprarMais {
+    display: flex;
+    flex-direction: row-reverse;
+    top: 87px;
+    position: relative;
+    margin: -48px 0 0 0;
+}
+
+.todos-pedidos-numero  {
+    padding: 0 0 22px;
+}
+
+.todos-pedidos {
+    display: flex;
+    color: #FFFFFF;
+}
+.tds-pedidos {
+    width: 32%;
+    height: 45px;
+    background: #5D8A66;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.tds-todos {
+    width: 100%;
+    background: #323050;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0 0 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 23px 0 0;
+    align-items: center;
+}
+
+.botao-tds {
+    width: 126px;
+    height: 33px;
+    background: #494770;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.numero-pedido{
+    height: 44px;
+    background: #EEEEEE;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 52px;
+    font-size: 17px;
+    color: #323050;
+}
+
+.detalhamento-pedidos {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 213px;
+}
+
+.detalhamentoPedidos {
+    display: flex;
+    padding: 0 65px;
+    height: 52px;
+    background: #D8D8D8;
+    border-radius: 8px 8px 0 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalhes {
+    height: 39px;
+    display: flex;
+    padding: 0 87px 0 0;
+    background: #C2C2C2;
+    border-radius: 0px 0px 8px 8px;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.favoritos-footer {
+    display: flex;
+    color: #FFFFFF;
+}
+
+.fav {
+    width: 32%;
+    height: 45px;
+    background: #5D8A66;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.favData {
+    width: 100%;
+    background: #323050;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0 0 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 23px 0 0;
+    align-items: center;
+}
+
+.favoritos-detalhes {
+    height: 55px;
+    background: #EEEEEE;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0px 10px;
+}
+
+.botão-fav-data {
+    width: 126px;
+    height: 33px;
+    background: #494770;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
