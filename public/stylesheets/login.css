@@ -38,7 +38,8 @@ form h5 {
 }
 
 main form input[type="text"],
-main form input[type="password"] {
+main form input[type="password"],
+main form input[type="email"] {
     width: 337px;
     height: 62px;
     padding: 9px;
