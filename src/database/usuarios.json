@@ -1,0 +1,16 @@
+[
+ {
+  "id": "e73f2caa-b8e8-430e-b02d-b274941a27e2",
+  "username": "Jonnata",
+  "date": "14/05/1993",
+  "email": "jonnatacosta@810enterprise.com",
+  "password": "$2b$10$PMyYxiuPX99EiKtAgGp7C.cvHqiOvSrlFZ2j5nLPViEFQb8mu7XgS"
+ },
+ {
+  "id": "9c6cec2c-f877-4f90-ba00-aacd6e67c704",
+  "username": "Maria",
+  "date": "08/02/1995",
+  "email": "maria@810enterprise.com",
+  "password": "$2b$10$22n7otr.HhBgTubfkccgweKgdtJQJO550qUh7tWkSqAA.EIql3iA."
+ }
+]
