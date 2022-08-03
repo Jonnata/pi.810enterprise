@@ -4,6 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     const collumns = {
       id: {
         type: dataTypes.INTEGER,
+        allowNull: false,
         primaryKey: true,
         autoIncrement: true
       },
@@ -11,8 +12,18 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING,
         allowNull: false
       },
+      nascimento: {
+        type: dataTypes.DATE,
+        allowNull: false,
+        defaultValue: dataTypes.NOW,
+        validate: {
+          isDate: true,
+          isAfterOrEqual: "1900-01-01",
+          isBeforeOrEqual: dataTypes.NOW
+        }
+      },
       email: {
-        type: dataTypes.STRING,
+        type: dataTypes.STRING(100),
         allowNull: false,
         unique: true
       },
