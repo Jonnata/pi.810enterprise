@@ -29,7 +29,13 @@ module.exports = (sequelize, dataTypes) => {
       },
       password: {
         type: dataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          len: [8, 20],
+          isAlphanumeric: true,
+          isLowercase: true,
+          isUppercase: true,
+        }
       },
       type: {
         type: dataTypes.ENUM,
