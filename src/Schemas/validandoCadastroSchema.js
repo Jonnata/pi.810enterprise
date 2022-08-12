@@ -22,7 +22,7 @@ const validandoCadastroSchema = Joi.object({
             'any.required': 'O campo password é obrigatório',
         }),
  
-    nascimento: Joi.date()
+    date: Joi.date()
         .max('2005-01-01')
         .min('1900-01-01')
         .iso()

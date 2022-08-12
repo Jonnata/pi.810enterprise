@@ -4,7 +4,7 @@ const router = express.Router();
 const validandoCadastroMiddleare = require('../middlewares/validandoCadastroMiddleare')
 
 router.get('/cadastro', cadastroController.renderCadastro);
-router.post('/cadastro', validandoCadastroMiddleare,cadastroController.create)
+router.post('/cadastro', validandoCadastroMiddleare,cadastroController.createUser);
 
 
 module.exports = router;
