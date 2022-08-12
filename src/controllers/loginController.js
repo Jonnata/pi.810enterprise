@@ -1,4 +1,4 @@
-const { User } = require('../database/models');
+const { Users } = require('../database/models');
 const bcrypt = require('bcrypt');
 
 const loginController = {
@@ -9,11 +9,7 @@ const loginController = {
     loginUser: (req, res) => {
     const { email, password } = req.body;
 
-    User.findOne({
-      where: {
-        email,
-      },
-    }).then(user => {
+    Users.findOne({ email: email,}).then(user => {
 
       if (!user) {
         alert('User does not exist');
@@ -26,7 +22,7 @@ const loginController = {
         res.redirect('/');
       }
 
-      res.render('/login');
+      res.render('login');
     }).catch(error => console.log(error));
   }
     }

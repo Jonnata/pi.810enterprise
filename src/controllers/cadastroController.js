@@ -1,6 +1,5 @@
-const { User } = require('../database/models');
+const { Users } = require('../database/models');
 const bcrypt = require('bcrypt');
-
 
 /*const pathUsersJSON = path.join(
   __dirname,
@@ -18,7 +17,7 @@ const cadastroController = {
             const { username, date, email, password } = req.body
             
             
-              const user = await User.findOne({ where: { email } });
+              const user = await Users.findOne({ where: { email } });
         
               if (user) {
                 return res.status(400).json({ error: 'Usuário já existe!' });
@@ -31,7 +30,7 @@ const cadastroController = {
                 password: bcrypt.hashSync(password, 10)
               }
         
-              const newUser = await User.create(body).then(() => {
+              const newUser = await Users.create(body).then(() => {
                 res.redirect('/login');
               }).catch(error => res.send(error))
           }
