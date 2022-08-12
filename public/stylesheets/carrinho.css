@@ -1,67 +1,80 @@
-.banner {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 70px;
-  }
+header {
+  width: 100%;
+  height: 123px;
+  background-color: #323050;
+  display: flex;
+  
+}
 
-main h1 {
-    text-align: justify;
+.logo-header img {
+  margin-top:30px;
+  margin-left: 20px;
+  opacity: 0.95;
+  border-radius:20px;
+  
+}
+form.navSearch input[type=text] {
+ width:910px;
+ height: 51px;
+ margin-top:30px;
+ margin-left:70px;
+ font-size: 20px;
+ 
+}
+form.navSearch button {
+  height:53px;
+  width: 50px;
+
+}
+.iconeMinhaConta{
+  margin-top:20px;
+  display:flex;
+  margin-left:20px;
+  width:64px;
+  height:65px;
+}
+.iconeMinhaConta h1{
+  color: white;
+  font-size:22px;
+  margin-left: 10px;
+  text-transform: none;
+  margin-top: 20px;
+}
+section .aproveite-e-leve-tambem{
+  display: flex;
+  flex-direction: row;
+}
+
+.aproveite-e-leve-tambem h1{
     margin-left: 56px;
     margin-top: 50px;
     font-size: 36px;
     font-weight: 400;
     text-transform: lowercase;
     color: #5D8A66;
-  }
-  .flex2{
-    display: flex;
-    align-items: center;
-  }
-
-section.aproveite-e-leve-tambem  {
-    display:flex;
-    justify-content: space-between;
-    position: relative;
-    flex-direction: column;
-}
-.products-row{
-    width: 285px;
-    height: 153px;
-    margin-left: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     
-  }
+}
 
-  .imageProduto .slider button{
-    background-color: #DFD7D7;
-    border-radius: 50px;
-    width: 94px;
-    height: 100px;
-    opacity: 0.8;
-    position:relative;
-    flex-direction:row;
-    border: none;
-    cursor: pointer;
-    transform: translate(-115%,0%);
-    margin-right: -100px;
-  }
+.products-row {
+   overflow: auto;
+   display: flex;
+}
 
-  .slider button:hover{
-    background-color: #AA9D9D ;
+.flex2{
+    display: flex;
+    align-items: center;
   }
-
 .imageProduto {
     max-width: 300px;
     height: 150px;
     background: #EBEBEB;  
     border-radius: 10px;
-    display: flex;
+    display: inline-flex;
     filter: drop-shadow(5px 1px 2px #a59999);
-    margin-right: 100px;
+    margin: 20px 10px 10px 20px;
+    
 }
-.imageProduto .img{
+.imageProduto img{
   max-width: 400px;
   height: 56px;
   display: flex;
@@ -84,24 +97,38 @@ section.aproveite-e-leve-tambem  {
   text-align: center;
   flex-direction: column;
 }
-.minha-cesta h1{
-  text-align: justify;
-    margin-left: 56px;
-    margin-top: 20px;
-    font-size: 36px;
-    font-weight: 400;
-    text-transform: lowercase;
-    color: #5D8A66;
-   
+
+section .minha-cesta{
+  display:flex;
+  flex-direction: column; 
+} 
+.cesta{
+  width: 100%;
+  justify-content: space-between;
+  display: inline-flex;
+}
+.cesta h1{
+  margin-left: 56px;
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #5D8A66;
+  
 }
 .divider {
   background-color: #EBEBEB;
+
+  width: 80%;
   margin-top: 50px;
   width: 1250px;
   height: 0px;
   border: 0.5px solid #EBEBEB;
   display: flex;
+  margin-right: 20px;
+  margin-top: 50px;
 }
+
 .minha-cesta{
   display:flex;
   position: relative;
@@ -148,15 +175,16 @@ section.aproveite-e-leve-tambem  {
   width: 100px;
   }
 .produtos 
+
 .resumoFinal {
   display: flex;
   width: 408px;
   height: 500px;
   background-color: #EBEBEB;
-  margin-left: 120px ;
   margin-top: 0px;
-    position: relative;
+  margin-left: 75%;
   flex-direction: column;
+  
 }
 
 .resumoFinal h2{
@@ -217,6 +245,41 @@ button:hover{
 }
 .resumoFinal a{
   color:#807C7C;
+  font-size: 15px;
+  margin: 60px ;
+}
+
+.pedido{
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  width: 70%;
+}
+
+.produtoFinal article{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+    margin-left: 0px;
+    margin-top: 70px;
+    flex-direction:row;
+}
+
+.quantidadeFinal form input {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 70px;
+  border-radius: 20px;
+  
+}
+.precoFinal article{
+  display: flex;
+  margin-top: 70px;
+}
+
   font-size: 16px;
   display: flex;
   position: relative;
