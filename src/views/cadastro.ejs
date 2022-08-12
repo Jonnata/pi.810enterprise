@@ -16,16 +16,16 @@
         <div class = "cadastrar-headline">Cadastrar</div>
 
         <label for="Nome">Primeiro Nome</label>
-        <input placeholder="Insira seu primeiro nome" type="text" name="username" id="username" />
+        <input placeholder="Insira seu primeiro nome" type="text" name="username" id="username" required minlength="3" />
 
         <label for="Nascimento">Data de Nascimento</label>
-        <input type="date" name="date" id="date" />
+        <input type="date" name="date" id="date" required/>
 
         <label for="email">Email</label>
-        <input placeholder="Insira seu melhor e-mail" type="text" name="username" id="username" />
+        <input placeholder="Insira seu melhor e-mail" type="email" name="email" id="email" required />
 
         <label for="senha">Senha</label>
-        <input placeholder="Insira sua senha aqui" type="password" name="senha" id="senha" />
+        <input placeholder="Insira sua senha aqui" type="password" name="senha" id="senha" required minlength="8"/>
 
         <div class="termos">
             <a href="/termos">

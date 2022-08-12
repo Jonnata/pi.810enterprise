@@ -1,33 +1,48 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const methodOverride = require("method-override");
+const logger = require('morgan');
+const sessionParser = require('express-session');
+const cors = require("cors");
 
 
-var carrinhoRouter = require('./src/routers/carrinhoRouter');
-var homeRouter = require('./src/routers/homeRouter');
-var usersRouter = require('./src/routers/usersRouter');
-var produtosRouter = require('./src/routers/produtosRouter');
-var produtoInternoRouter = require('./src/routers/produtoInternoRouter');
-var loginRouter = require('./src/routers/loginRouter');
-var cadastroRouter = require('./src/routers/cadastroRouter');
-var painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
+const carrinhoRouter = require('./src/routers/carrinhoRouter');
+const homeRouter = require('./src/routers/homeRouter');
+const usersRouter = require('./src/routers/usersRouter');
+const produtosRouter = require('./src/routers/produtosRouter');
+const produtoInternoRouter = require('./src/routers/produtoInternoRouter');
+const loginRouter = require('./src/routers/loginRouter');
+const cadastroRouter = require('./src/routers/cadastroRouter');
+const painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
+const compraFinalizadaRouter = require('./src/routers/compraFinalizadaRouter');
 const logMiddleware = require("./src/middlewares/log");
 
-
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'src','views'));
 app.set('view engine', 'ejs');
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  app.use(cors())
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
+app.use(sessionParser({ secret: '810enterPrise', resave: false, saveUninitialized: false }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride("_method"));
 app.use(logMiddleware);
 
 
@@ -40,6 +55,7 @@ app.use(produtoInternoRouter);
 app.use(loginRouter);
 app.use(cadastroRouter);
 app.use(painelUsuarioRouter);
+app.use(compraFinalizadaRouter);
 
 
 app.use((req, res) => {

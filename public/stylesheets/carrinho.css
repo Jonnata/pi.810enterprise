@@ -118,17 +118,68 @@ section .minha-cesta{
 }
 .divider {
   background-color: #EBEBEB;
+
   width: 80%;
+  margin-top: 50px;
+  width: 1250px;
   height: 0px;
   border: 0.5px solid #EBEBEB;
   display: flex;
   margin-right: 20px;
   margin-top: 50px;
 }
+
+.minha-cesta{
+  display:flex;
+  position: relative;
+  }
+
+.nomes{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction:column;
+  margin-left: -200px;
+  margin-top: 50px;
+}
+
+.nomes article{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dividerNomes{
+  background-color: #EBEBEB;
+  margin-top: 20px;
+  margin-left: 0px;
+  width: 1000px;
+  height: 0px;
+  border: 0.5px solid #EBEBEB;
+  display: flex;
+  flex-direction: column;
+}
+.itens{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+.produtos{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100px;
+  }
+.produtos 
+
 .resumoFinal {
   display: flex;
-  width: 328px;
-  height: 450px;
+  width: 408px;
+  height: 500px;
   background-color: #EBEBEB;
   margin-top: 0px;
   margin-left: 75%;
@@ -138,9 +189,9 @@ section .minha-cesta{
 
 .resumoFinal h2{
   text-align: justify;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     text-transform: lowercase;
     color: #5D8A66;
@@ -148,34 +199,36 @@ section .minha-cesta{
 }
 .resumoFinal p{
   text-align: justify;
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 400;
+  margin-left: 20px;
+  font-size: 20px;
   text-transform: lowercase;
   color: #807C7C;
   display: flex;
+  line-height: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .dividerResumo {
   background-color: #EBEBEB;
   margin-top: 0px;
-  margin-left: 10px;
-  width: 305px;
-  border: 0.5px solid #807C7C;
+  margin-left: 20px;
+  width: 355px;
+  border: 0.5px solid #D2D1D1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .resumoFinal h4{
   text-align: justify;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 5px;
   margin-bottom: 60px;
-  font-size: 19px;
+  font-size: 23px;
   text-transform: lowercase;
   color:#000000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .resumoFinal button {
-width: 290px;
+width: 360px;
 height: 60px;
 margin-top: 10px;
 border-radius: 10px;
@@ -226,3 +279,11 @@ button:hover{
   display: flex;
   margin-top: 70px;
 }
+
+  font-size: 16px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  }

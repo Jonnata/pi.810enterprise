@@ -9,6 +9,7 @@
 }
 
 main form input[type="date"],
+main form input[name="password"],
 main form input[name="password"] {
     width: 337px;
     height: 62px;
