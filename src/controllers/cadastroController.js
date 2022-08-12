@@ -1,48 +1,39 @@
-const getInfoDatabase = require('../utils/getInfoDatabase')
-const bcrypt = require('bcrypt')
-const { v4 } = require('uuid')
-const path = require('path')
-const fs = require('fs')
-const validandoCadastroSchema = require('../Schemas/validandoCadastroSchema')
+const { User } = require('../database/models');
+const bcrypt = require('bcrypt');
 
 
-const pathUsersJSON = path.join(
+/*const pathUsersJSON = path.join(
   __dirname,
   "..",
   "database",
   "usuarios.json"
-);
+);*/
 
 const cadastroController = {
     renderCadastro: (req, res) => {
         res.render('cadastro');
         },
     
-    create: (req, res) => {
+    createUser: async (req, res) => {
             const { username, date, email, password } = req.body
-            const newId = v4()
-
-            const { error } = validandoCadastroSchema.validate(req.body, { abortEarly: false })
-
-            const users = getInfoDatabase('usuarios');
+            
+            
+              const user = await User.findOne({ where: { email } });
         
-            const hashedPassword = bcrypt.hashSync(password, 10);
+              if (user) {
+                return res.status(400).json({ error: 'Usuário já existe!' });
+              }
         
-            const newUser = {
-              id: newId,
-              username,
-              date,
-              email,
-              password: hashedPassword
-            }
+              const body = {
+                username,
+                date,
+                email,
+                password: bcrypt.hashSync(password, 10)
+              }
         
-            users.push(newUser)
-        
-            const usersJSON = JSON.stringify(users, null, " ");
-        
-            fs.writeFileSync(pathUsersJSON, usersJSON);
-        
-            res.redirect('/login')
+              const newUser = await User.create(body).then(() => {
+                res.redirect('/login');
+              }).catch(error => res.send(error))
           }
     }
 

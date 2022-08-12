@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const methodOverride = require("method-override");
 const logger = require('morgan');
 const sessionParser = require('express-session');
+const cors = require("cors");
 
 
 const carrinhoRouter = require('./src/routers/carrinhoRouter');
@@ -23,6 +24,17 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'src','views'));
 app.set('view engine', 'ejs');
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  app.use(cors())
+  next();
+});
 
 app.use(logger('dev'));
 app.use(express.json());
