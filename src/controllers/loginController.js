@@ -11,9 +11,9 @@ const loginController = {
 
     Users.findOne({ email: email,}).then(user => {
 
-      if (!user) {
-        alert('User does not exist');
-        res.redirect('/login');
+      if (!email) {
+        //alert('User does not exist')
+        res.redirect('/cadastro');
       }
 
       if (bcrypt.compareSync(password, user.password)) {
