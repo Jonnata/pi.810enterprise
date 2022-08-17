@@ -1,13 +1,12 @@
-const getInfoDatabase = require('../utils/getInfoDatabase')
-
-const users = getInfoDatabase('users')
+const models = require('../database/models');
+const Users = models.Users;
 
 function cookie(req, res, next) {
   const cookies = req.cookies.remember;
   let userIsLoggedBySession = req.session.user
 
   if (Boolean(cookies) || Boolean(userIsLoggedBySession)) {
-    const userFound = users.find(user => user.email === cookies)
+    const userFound = Users.findO(user => user.email === cookies || user.email === userIsLoggedBySession);
     userIsLoggedBySession = userFound
     req.user = userIsLoggedBySession
   }

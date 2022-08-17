@@ -7,10 +7,11 @@ const validandoCadastroSchema = Joi.object({
         .min(3)
         .max(30)
         .messages({
-            'alphanum': 'O campo username deve conter apenas letras e números',
+            'string.alphanum': 'O Primeiro Nome deve ser alfanumérico',
+            'alphanum': 'O campo PRIMEIRO NOME deve conter apenas letras e números',
             'string.empty': 'O campo PRIMEIRO NOME é obrigatório',
-            'string.min': 'O campo username deve ter no mínimo 3 caracteres',
-            'string.max': 'O campo username deve ter no máximo 30 caracteres',
+            'string.min': 'O campo PRIMEIRO NOME deve ter no mínimo 3 caracteres',
+            'string.max': 'O campo PRIMEIRO NOME deve ter no máximo 30 caracteres',
         }),
  
     password: Joi.string()

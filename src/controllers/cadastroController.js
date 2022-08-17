@@ -35,7 +35,7 @@ const cadastroController = {
         
               const newUser = await Users.create(body).then(() => {
                 res.redirect('/login');
-              }).catch(error => res.send(error))
+              }).catch(error => res.render('cadastro', { errors: error.errors}));
           }
     }
 

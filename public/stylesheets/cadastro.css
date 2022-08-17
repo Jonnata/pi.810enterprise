@@ -50,9 +50,9 @@ main form .criar {
     font-size:15px;
 }
 
-.errors {
-    color: #FF0000;
-    font-size: 12px;
-    line-height: 18px;
-    list-style: none;
-}
+.alert.alert-danger {
+    border-left: solid;
+    background-color: rgba(248, 215, 218, 1);
+    border-color: rgba(220, 53, 69, 1);
+    color: rgba(114, 28, 36,1);
+  }

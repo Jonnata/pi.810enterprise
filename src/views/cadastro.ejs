@@ -35,11 +35,11 @@
         </div>
 
         <% if(typeof errors !== 'undefined') { %>
-          <ul class="errors">
+          
             <% errors.forEach(error => { %>
-            <li><%= error.message %></li>
+              <ul class="alert alert-danger"
+              role="alert"><%= error.message %></ul>
             <% }) %>
-          </ul>
           <% } %>
 
         <button class="criar" type="submit" value="Criar a minha conta">Criar a minha conta</button>
