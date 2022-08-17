@@ -1,5 +1,6 @@
 const { Users } = require('../database/models');
 const bcrypt = require('bcrypt');
+const validandoCadastroSchema = require('../Schemas/validandoCadastroSchema');
 
 /*const pathUsersJSON = path.join(
   __dirname,
@@ -18,9 +19,11 @@ const cadastroController = {
             
             
               const user = await Users.findOne({ where: { email } });
-        
-              if (user) {
-                return res.status(400).json({ error: 'Usuário já existe!' });
+
+              const { error } = validandoCadastroSchema.validate(req.body, { abortEarly: false });
+
+              if (error) {
+                return res.render('cadastro', { errors: error.details });
               }
         
               const body = {

@@ -2,15 +2,15 @@ const Joi = require('joi');
  
 const validandoCadastroSchema = Joi.object({
     username: Joi.string()
+        .required() 
         .alphanum()
         .min(3)
         .max(30)
-        .required()
         .messages({
             'alphanum': 'O campo username deve conter apenas letras e números',
+            'string.empty': 'O campo PRIMEIRO NOME é obrigatório',
             'string.min': 'O campo username deve ter no mínimo 3 caracteres',
             'string.max': 'O campo username deve ter no máximo 30 caracteres',
-            'any.required': 'O campo username é obrigatório',
         }),
  
     password: Joi.string()
@@ -18,20 +18,19 @@ const validandoCadastroSchema = Joi.object({
         .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})'))
         .required()
         .messages({
-            'string.pattern.base': 'O campo password deve ter no mínimo 8 caracteres, 1 letra maiúscula, 1 letra minúscula, 1 número e 1 caractere especial',
-            'any.required': 'O campo password é obrigatório',
+            'string.empty': 'O campo SENHA é obrigatório',
+            'string.pattern.base': 'O campo SENHA deve ter no mínimo 8 caracteres, 1 letra maiúscula, 1 letra minúscula, 1 número e 1 caractere especial',
+            'any.required': 'O campo SENHA é obrigatório',
         }),
  
     date: Joi.date()
+        .required() 
         .max('2005-01-01')
         .min('1900-01-01')
-        .iso()
-        .required()
         .messages({
+            'date.base': 'O campo DATA DE NASCIMENTO é obrigatório',
             'date.max': 'O campo nascimento deve ser menor ou igual a 2005-01-01',
             'date.min': 'O campo nascimento deve ser maior ou igual a 1900-01-01',
-            'date.iso': 'O campo nascimento deve ser uma data válida',
-            'any.required': 'O campo nascimento é obrigatório',
         }),
 
     email: Joi.string()
@@ -39,6 +38,7 @@ const validandoCadastroSchema = Joi.object({
         .required()
         .pattern(new RegExp('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'))
         .messages({
+            'string.empty': 'O campo EMAIL é obrigatório',
             'string.email': 'O campo email deve ser um email válido',
             'string.min': 'O campo email deve ter no mínimo 2 domínios',
             'any.required': 'O campo email é obrigatório',

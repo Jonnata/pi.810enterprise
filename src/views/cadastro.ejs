@@ -16,16 +16,16 @@
         <div class = "cadastrar-headline">Cadastrar</div>
 
         <label for="Nome">Primeiro Nome</label>
-        <input placeholder="Insira seu primeiro nome" type="text" name="username" id="username" required minlength="3" />
+        <input placeholder="Insira seu primeiro nome" type="text" name="username" id="username" />
 
         <label for="Nascimento">Data de Nascimento</label>
-        <input type="date" name="date" id="date" required/>
+        <input type="date" name="date" id="date" />
 
         <label for="email">Email</label>
-        <input placeholder="Insira seu melhor e-mail" type="email" name="email" id="email" required />
+        <input placeholder="Insira seu melhor e-mail" type="email" name="email" id="email" />
 
         <label for="senha">Senha</label>
-        <input placeholder="Insira sua senha aqui" type="password" name="password" id="password" required minlength="8"/>
+        <input placeholder="Insira sua senha aqui" type="password" name="password" id="password" />
 
         <div class="termos">
             <a href="/termos">
@@ -33,6 +33,14 @@
             <strong>Termos de Serviço</strong> & <strong>Politica de Privacidade</strong>
             </a>
         </div>
+
+        <% if(typeof errors !== 'undefined') { %>
+          <ul class="errors">
+            <% errors.forEach(error => { %>
+            <li><%= error.message %></li>
+            <% }) %>
+          </ul>
+          <% } %>
 
         <button class="criar" type="submit" value="Criar a minha conta">Criar a minha conta</button>
 
@@ -48,7 +56,7 @@
       <article class="melhor-plataforma">
           <h2>Sua melhor plataforma de compras online de GiftCards</h2>
       </article>
-
+        
       <%- include('./partials/footerLoginCadastro') %>
 
     </main>

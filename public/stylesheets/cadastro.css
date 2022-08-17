@@ -49,3 +49,10 @@ main form .criar {
     color: #B0A6A6;
     font-size:15px;
 }
+
+.errors {
+    color: #FF0000;
+    font-size: 12px;
+    line-height: 18px;
+    list-style: none;
+}
