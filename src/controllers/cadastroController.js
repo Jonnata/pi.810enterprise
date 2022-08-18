@@ -16,8 +16,7 @@ const cadastroController = {
     
     createUser: async (req, res) => {
             const { username, date, email, password } = req.body
-            
-            
+
               const user = await Users.findOne({ where: { email } });
 
               const { error } = validandoCadastroSchema.validate(req.body, { abortEarly: false });
