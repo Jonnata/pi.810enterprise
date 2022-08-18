@@ -1,4 +1,6 @@
-document.getElementById("username").value = localStorage.getItem("username");
+window.onload = () => {
+
+        document.getElementById("username").value = localStorage.getItem("username");
         document.getElementById("date").value = localStorage.getItem("date");
         document.getElementById("email").value = localStorage.getItem("email");
         /* Aqui você pode adicionar mais entradas para definir o valor. se for salvo*/
@@ -17,3 +19,5 @@ document.getElementById("username").value = localStorage.getItem("username");
             }
             return localStorage.getItem(v);
         }
+        
+}
