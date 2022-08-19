@@ -1,2 +1,4 @@
 A rota / foi acessada.
 A rota /login foi acessada.
+A rota /cadastro foi acessada.
+A rota /cadastro foi acessada.
