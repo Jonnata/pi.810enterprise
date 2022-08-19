@@ -41,6 +41,13 @@ module.exports = (sequelize, dataTypes) => {
         notEmpty: true,
       }
     },
+    image: {
+      type: dataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      }
+    }
   }
   const config = {
     tableName: 'users',
@@ -48,6 +55,18 @@ module.exports = (sequelize, dataTypes) => {
   }
 
   const User = sequelize.define(alias, columns, config);
+
+  User.associate = function(models) {
+    User.hasOne(models.Carrinho, {
+      as: 'carrinho',
+      foreignKey: 'id_user',
+    });
+
+    User.hasMany(models.Produtos, {
+      as: 'produtos',
+      foreignKey: 'id_user',
+    });
+  }
   
 return User;
 }

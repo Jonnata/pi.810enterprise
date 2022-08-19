@@ -6,6 +6,13 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true,
         },
+        data_da_compra: {
+            type: dataTypes.DATE,
+            allowNull: false,
+            validate: {
+                notEmpty: true,
+            }
+        },
         id_user: {
             type: dataTypes.INTEGER,
             allowNull: false,
@@ -15,6 +22,13 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_produto: {
             type: dataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                notEmpty: true,
+            }
+        },
+        total: {
+            type: dataTypes.FLOAT,
             allowNull: false,
             validate: {
                 notEmpty: true,
@@ -33,5 +47,15 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
     }
     const Carrinho = sequelize.define(alias, columns, config);
+
+    Carrinho.associate = function(models) {
+        Carrinho.belongsToMany(models.Produtos, {
+            as: 'produtos',
+            through: 'carrinho',
+            foreignKey: 'id_produto',
+            otherKey: 'id_produto',
+            timestamps: false,
+        });
+    }
     return Carrinho;
     }

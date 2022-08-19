@@ -3,6 +3,7 @@ window.onload = () => {
         document.getElementById("username").value = localStorage.getItem("username");
         document.getElementById("date").value = localStorage.getItem("date");
         document.getElementById("email").value = localStorage.getItem("email");
+        document.getElementById("image").value = localStorage.getItem("image");
         /* Aqui você pode adicionar mais entradas para definir o valor. se for salvo*/
 
         //Salve a função value - salve-a em localStorage como (ID, VALUE)
