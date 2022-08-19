@@ -44,6 +44,13 @@ const validandoCadastroSchema = Joi.object({
             'string.min': 'O campo email deve ter no mínimo 2 domínios',
             'any.required': 'O campo email é obrigatório',
         }),
+
+    image: Joi.string()
+        .required()
+        .messages({
+            'string.empty': 'O campo IMAGEM é obrigatório',
+        })
+
 })
  
 module.exports = validandoCadastroSchema

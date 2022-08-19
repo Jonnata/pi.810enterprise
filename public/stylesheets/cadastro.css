@@ -10,7 +10,7 @@
 
 main form input[type="date"],
 main form input[name="password"],
-main form input[name="password"] {
+main form input[name="password"]{
     width: 337px;
     height: 62px;
     padding: 9px;
@@ -18,6 +18,19 @@ main form input[name="password"] {
     border: 5px solid #5D8A66;
     border-radius: 15px;
 }
+
+input[type="file"] {
+    width: 337px;
+    font-size: 17px;
+    padding: 10px;
+    height: 62px;
+    border: 5px solid #5D8A66;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/*input[type="file"]{
+    display: none;
+}*/
 
 .cadastrar-headline {
     font-weight: 400;

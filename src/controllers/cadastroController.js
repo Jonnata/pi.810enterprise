@@ -15,7 +15,7 @@ const cadastroController = {
         },
     
     createUser: async (req, res) => {
-            const { username, date, email, password } = req.body
+            const { username, date, email, image, password } = req.body
 
               const user = await Users.findOne({ where: { email } });
 
@@ -29,6 +29,7 @@ const cadastroController = {
                 username,
                 date,
                 email,
+                image,
                 password: bcrypt.hashSync(password, 10)
               }
         
