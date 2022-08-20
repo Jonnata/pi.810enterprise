@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
         }
         },
         descricao: {
-        type: dataTypes.STRING,
+        type: dataTypes.TEXT,
         allowNull: false,
         validate: {
             notEmpty: true,
@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
     const Produtos = sequelize.define(alias, columns, config);
 
     Produtos.associate = function(models) {
-        Produtos.belongsToMany(models.Fabricante, {
+        Produtos.belongsToMany(models.Fabricantes, {
             as: 'fabricante',
             through: 'produtos_fabricante',
             foreignKey: 'id_produto',
@@ -57,7 +57,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false,
         });
         
-        Produtos.hasMany(models.Carrinho, {
+        Produtos.hasMany(models.Carrinhos, {
             as: 'carrinho',
             foreignKey: 'id_produto',
         });

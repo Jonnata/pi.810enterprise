@@ -57,7 +57,7 @@ module.exports = (sequelize, dataTypes) => {
   const User = sequelize.define(alias, columns, config);
 
   User.associate = function(models) {
-    User.hasOne(models.Carrinho, {
+    User.hasOne(models.Carrinhos, {
       as: 'carrinho',
       foreignKey: 'id_user',
     });

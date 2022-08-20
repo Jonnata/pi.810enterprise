@@ -24,7 +24,7 @@ module.exports = {
         password: '12345678',
         image: 'public/images/painelUsuario/avatar.png',
       },
-    ])
+    ]);
   },
 
   async down (queryInterface, Sequelize) {
