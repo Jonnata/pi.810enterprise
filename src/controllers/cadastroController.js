@@ -25,7 +25,7 @@ const cadastroController = {
                 return res.render('cadastro', { errors: error.details }); //renderiza a página de cadastro com os erros de validação
               }
               
-              /*const { fieldname } = req.file; 
+              /*const { filename } = req.file; 
 
               const extensionFile = filename.split(".")[1].toLowerCase(); //Pega a extensão do arquivo
 
