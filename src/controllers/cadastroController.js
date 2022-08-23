@@ -15,7 +15,7 @@ const cadastroController = {
         },
     
     createUser: async (req, res) => {
-            const { username, date, email, password } = req.body
+            const { username, date, email, image, password } = req.body
 
               const user = await Users.findOne({ where: { email } });
 
@@ -25,7 +25,7 @@ const cadastroController = {
                 return res.render('cadastro', { errors: error.details }); //renderiza a página de cadastro com os erros de validação
               }
               
-              const { filename } = req.file;
+              /*const { fieldname } = req.file; 
 
               const extensionFile = filename.split(".")[1].toLowerCase(); //Pega a extensão do arquivo
 
@@ -33,13 +33,13 @@ const cadastroController = {
                 return res.render('cadastro', {
                   errors: [ { msg: "O arquivo deve ser uma imagem" } ] 
                 }) //renderiza a página de cadastro com os erros de validação
-              }
+              }*/
         
               const body = {
                 username,
                 date,
                 email,
-                image: filename,
+                image,
                 password: bcrypt.hashSync(password, 10)
               }
         
