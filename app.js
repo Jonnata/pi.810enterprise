@@ -57,7 +57,7 @@ app.use(cadastroRouter);
 app.use(painelUsuarioRouter);
 app.use(compraFinalizadaRouter);
 
-/*
+
 app.use((req, res) => {
   return res.status(404).render('not-found')
 })
@@ -76,7 +76,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});*/
+});
 
 //module.exports = app;
 app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'))

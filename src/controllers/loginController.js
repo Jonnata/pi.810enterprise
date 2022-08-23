@@ -25,6 +25,7 @@ const loginController = {
       res.render('login');
     }).catch(error => console.log(error));
   },
+  
   logoutUser: (req, res) => {
     res.clearCookie('user');
     res.redirect('/');
