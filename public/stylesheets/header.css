@@ -1,35 +1,25 @@
 header {
+  display: flex;
   position: fixed;
   width: 100%;
   height: 15%;
   background: #323050;
   z-index: 5;
+  justify-content: space-around;
+  align-items: center;
 }
 
-header div img {
-    position: absolute;
+.logo-header img {
     width: 199px;
     height: 97px;
-    left: 43px;
-    top: 26px;
     background-blend-mode: lighten;
     filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+    border-radius: 20px
 }
 
 header a {
-    position: absolute;
-    width: 616px;
-    height: 23.08px;
-    left: 284px;
-    top: 21.49px;
-
-    font-weight: 400;
     font-size: 20px;
-    line-height: 29px;
-
     color: #FFFFFF;
-
 }
 
 header nav ul {
@@ -52,27 +42,17 @@ header nav ul li{
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
-    float: left;
     width: 570px;
     background: #f1f1f1;
-    position: absolute;
-    top: 58.63px;
-    left: 285px;
   }
   
   /* Style the submit button */
   form.navSearch button {
-    float: left;
-    width: 35px;
     padding: 10px;
     color: #323050;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
     cursor: pointer;
-    height: 42.5px;
-    left: 855px;
-    top: 58.5px;
     position: absolute;
   }
   
@@ -86,36 +66,53 @@ header nav ul li{
     clear: both;
     display: table;
   }
+
+.menu-header {
+  display: flex;
+}
   
 .iconeMinhaConta {
-  position: relative;
-    width: 208px;
-    height: 53.46px;
-    top: 18px;
-    left: 907px;
-    display: inline-flex;
+  width: 208px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   }
 
+.iconeMinhaConta img {
+    width: 199px;
+    height: 64px;
+    background-blend-mode: lighten;
+    filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
 .iconeMinhaConta h1 {
-  height: 26px;
-  font-weight: 400;
-  font-size: 19px;
-  color: #FFFFFF;
-}
-
-.iconeCarrinho{
-  position: relative;
-  width: 209px;
-  height: 53.46px;
-  top: 18px;
-  left: 918px;
-  display: inline-flex;
-}
-
-.iconeCarrinho h2 {
   height: 1px;
   font-weight: 400;
   font-size: 19px;
   color: #FFFFFF;
+  font-weight: bold;
+}
+
+.iconeCarrinho{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconeCarrinho img {
+    width: 199px;
+    height: 64px;
+    background-blend-mode: lighten;
+    filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+}
+
+.iconeCarrinho h1 {
+  height: 1px;
+  font-weight: 400;
+  font-size: 19px;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
