@@ -1,0 +1,26 @@
+.section-4-cards {
+    margin-top: 801px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-4-cards {
+    font-size: 44px;
+    line-height: 0;
+}
+
+.text-4cards{
+    text-align: center;
+    width: 803px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #6c6c6c;
+    margin-top: 24px;
+    padding: 0 7px 0 7px;
+}
+
+section.section-4-cards img {
+    width: 805px;
+}
