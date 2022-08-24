@@ -49,6 +49,7 @@ const validandoCadastroSchema = Joi.object({
         .required()
         .messages({
             'string.empty': 'A foto do perfil é obrigatória',
+            'any.required': 'A foto do perfil é obrigatória',
         })
 
 })
