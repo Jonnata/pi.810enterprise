@@ -12,7 +12,7 @@
         </div>
 
     <div class="faixa"></div>
-      <form action="/cadastro" method="POST" enctype="multipart/form-data">
+      <form action="/cadastro" method="POST" enctype="multipart/form-data" multiple>
         <div class = "cadastrar-headline">Cadastrar</div>
 
         <label for="Nome">Primeiro Nome</label>
@@ -36,6 +36,11 @@
             <strong>Termos de Serviço</strong> & <strong>Politica de Privacidade</strong>
             </a>
         </div>
+
+        <% if(typeof extensionError !== 'undefined') { %>
+          <ul class="alert alert-danger"
+          role="alert"><%= extensionError %></ul>
+        <% } %>
 
         <% if(typeof errors !== 'undefined') { %>
           

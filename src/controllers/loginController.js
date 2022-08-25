@@ -9,15 +9,16 @@ const loginController = {
     loginUser: (req, res) => {
     const { email, password } = req.body;
 
-    Users.findOne({ email: email,}).then(user => {
+    Users.findOne({ where: { email } })
+    .then(user => {
 
-      if (!email) {
+      if (email) {
         //alert('User does not exist')
         res.redirect('/cadastro');
       }
 
       if (bcrypt.compareSync(password, user.password)) {
-        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, type: user.type }));
+        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email }));
 
         res.redirect('/');
       }
