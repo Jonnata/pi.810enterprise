@@ -20,18 +20,27 @@
     <link rel='stylesheet' href='../stylesheets/footerPainelUsuario.css' />
     <link rel='stylesheet' href='../stylesheets/headerPainelUsuario.css' />
     <link rel='stylesheet' href='../stylesheets/not-found.css' />
+    <link rel='stylesheet' href='../stylesheets/section4cards.css' />
+    <link rel='stylesheet' href='../stylesheets/backToTop.css' />
   </head>
 
 
 <!-- acessivel em libras -->
   <div vw class="enabled">
+    <style>
+      [vw] [vw-access-button] .access-button {
+        width: 43%;
+      }
+    </style>
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
+
     </div>
   </div>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+    
   </script>
   <!-- acessivel em libras -->

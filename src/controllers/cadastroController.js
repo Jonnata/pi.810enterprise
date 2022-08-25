@@ -1,6 +1,8 @@
 const { Users } = require('../database/models');
 const bcrypt = require('bcrypt');
 const validandoCadastroSchema = require('../Schemas/validandoCadastroSchema');
+const path = require('path');
+const fs = require('fs');
 
 /*const pathUsersJSON = path.join(
   __dirname,
@@ -17,35 +19,31 @@ const cadastroController = {
     createUser: async (req, res) => {
             const { username, date, email, image, password } = req.body
 
-              const user = await Users.findOne({ where: { email } });
+            Users.findOne({ where: { email } });
+            
+            const { error } = validandoCadastroSchema.validate(req.body, { abortEarly: false }); // abortEarly: false para validar todos os campos do formulário
+            
+            if (error) {
+              return res.render('cadastro', { errors: error.details });
+            }
 
-              const { error } = validandoCadastroSchema.validate(req.body, { abortEarly: false }); // abortEarly: false para validar todos os campos do formulário
+            const { filename } = req.file;
 
-              if (error) {
-                return res.render('cadastro', { errors: error.details }); //renderiza a página de cadastro com os erros de validação
-              }
-              
-              /*const { filename } = req.file; 
-
-              const extensionFile = filename.split(".")[1].toLowerCase(); //Pega a extensão do arquivo
-
-              if (extensionFile !== "jpg" && extensionFile !== "png") {
-                return res.render('cadastro', {
-                  errors: [ { msg: "O arquivo deve ser uma imagem" } ] 
-                }) //renderiza a página de cadastro com os erros de validação
-              }*/
-        
               const body = {
                 username,
                 date,
                 email,
-                image,
+                image: filename,
                 password: bcrypt.hashSync(password, 10)
               }
         
-              const newUser = await Users.create(body).then(() => {
+              const newUser = await Users.create(body)
+              
+              .then(() => {
                 res.redirect('/login');
-              }).catch(error => res.render('cadastro', { errors: error.errors}));
+              })
+              .catch(error => res.render('cadastro', { errors: error.errors}));
+            
           }
     }
 
