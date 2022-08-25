@@ -17,11 +17,9 @@ const validandoCadastroSchema = Joi.object({
     password: Joi.string()
         .required()
         .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})'))
-        .required()
         .messages({
             'string.empty': 'O campo SENHA é obrigatório',
             'string.pattern.base': 'O campo SENHA deve ter no mínimo 8 caracteres, 1 letra maiúscula, 1 letra minúscula, 1 número e 1 caractere especial',
-            'any.required': 'O campo SENHA é obrigatório',
         }),
  
     date: Joi.date()
@@ -46,10 +44,8 @@ const validandoCadastroSchema = Joi.object({
         }),
 
     image: Joi.string()
-        .required()
         .messages({
             'string.empty': 'A foto do perfil é obrigatória',
-            'any.required': 'A foto do perfil é obrigatória',
         })
 
 })

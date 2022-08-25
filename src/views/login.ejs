@@ -27,6 +27,14 @@
           <input type="checkbox" name="remember" id="remember" > Lembre-me
         </div>
 
+        <% if(typeof errors !== 'undefined') { %>
+          
+          <% errors.forEach(error => { %>
+            <ul class="alert alert-danger"
+            role="alert"><%= error.message %></ul>
+          <% }) %>
+        <% } %>
+
         <button class="continuar" type="submit" value="Continuar">Continuar</button>
         <div class="criar-conta">
         <a href="/cadastro">Criar conta</a>
