@@ -7,6 +7,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
     },
     username: {
       type: dataTypes.STRING,
@@ -47,7 +48,23 @@ module.exports = (sequelize, dataTypes) => {
       validate: {
         notEmpty: true,
       }
-    }
+    },
+    type: {
+      type: dataTypes.ENUM,
+      values: ['admin', 'user'],
+      allowNull: false,
+      defaultValue: 'user',
+    },
+    created_at: {
+      type: dataTypes.DATE,
+      allowNull: false,
+      defaultValue: new Date(),
+    },
+    updated_at: {
+      type: dataTypes.DATE,
+      allowNull: false,
+      defaultValue: new Date(),
+  }
   }
   const config = {
     tableName: 'users',
@@ -56,14 +73,8 @@ module.exports = (sequelize, dataTypes) => {
 
   const User = sequelize.define(alias, columns, config);
 
-  User.associate = function(models) {
-    User.hasOne(models.Carrinhos, {
-      as: 'carrinho',
-      foreignKey: 'id_user',
-    });
-
-    User.hasMany(models.Produtos, {
-      as: 'produtos',
+  User.associate = ({ Carrinhos }) => {
+    User.hasMany(Carrinhos, {
       foreignKey: 'id_user',
     });
   }

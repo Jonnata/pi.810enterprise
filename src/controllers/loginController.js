@@ -9,12 +9,14 @@ const loginController = {
     loginUser: (req, res) => {
     const { email, password } = req.body;
 
-    Users.findOne({ where: { email } })
+    const user = Users.findOne({ where: { email } })
+    
     .then(user => {
 
-      if (email) {
-        //alert('User does not exist')
-        res.redirect('/cadastro');
+      if (!user || !bcrypt.compareSync(password, user.password)) {
+        return res.render('login', {
+          loginError: 'Usuário ou senha incorretos!'
+        });
       }
 
       if (bcrypt.compareSync(password, user.password)) {
