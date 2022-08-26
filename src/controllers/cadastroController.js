@@ -50,10 +50,21 @@ const cadastroController = {
               })
               .catch(error => res.render('cadastro', { errors: error.errors}));
             
-          }
-
+          },
           // Entrar na pasta dos avatar
           // Deletar todas os arquivos que não tem a extensão que você quer
+
+          fsRemovePDFAndOthersInPublicImagesAvatarUsusarios: () => {
+            fs.unlink('*pdf', (err) => {
+              if (err) console.log(err);
+              else console.log('Arquivo deletado com sucesso!');
+           });
+          },
+
+          
+
+
+          
     }
 
     module.exports = cadastroController;

@@ -16,9 +16,9 @@
         <h5>Olá! digite o seu e-mail e senha para logar</h5>
 
         <label for="email">Email</label>
-        <input placeholder="Insira seu e-mail" type="text" name="username" id="username" required/>
+        <input type="email" name="email" id="email" placeholder="Insira seu e-mail" required/>
         <label for="password">Senha</label>
-        <input placeholder="Insira sua senha aqui" type="password" name="password" id="password" required />
+        <input type="password" name="password" id="password" placeholder="Insira sua senha aqui" required />
 
         <div class="esqueci-senha">
             <a href="/novaSenha">Esqueci minha senha</a>
@@ -27,12 +27,9 @@
           <input type="checkbox" name="remember" id="remember" > Lembre-me
         </div>
 
-        <% if(typeof errors !== 'undefined') { %>
-          
-          <% errors.forEach(error => { %>
-            <ul class="alert alert-danger"
-            role="alert"><%= error.message %></ul>
-          <% }) %>
+        <% if(typeof loginError !== 'undefined') { %>
+          <ul class="alert alert-danger"
+          role="alert"><%= loginError %></ul>
         <% } %>
 
         <button class="continuar" type="submit" value="Continuar">Continuar</button>
