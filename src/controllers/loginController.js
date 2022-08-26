@@ -7,7 +7,8 @@ const loginController = {
         },
     
     loginUser: (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, remember } = req.body;
+    const toRemember = Boolean(remember)
 
     const user = Users.findOne({ where: { email } })
     
@@ -19,10 +20,10 @@ const loginController = {
         });
       }
 
-      if (bcrypt.compareSync(password, user.password)) {
-        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email }));
+      if (toRemember) {
+        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email }), { maxAge: 1000 * 60 * 60 * 24 * 7 }); // se o usuário marcar para manter logado, o cookie fica ativo por 7 dias
 
-        res.redirect('/');
+        res.render('home', { user });
       }
 
       res.render('login');
