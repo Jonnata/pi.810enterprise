@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>810 enterPrise - editar produto</title>
+
+  <link rel='stylesheet' href='./stylesheets/style.css' />
+  <link rel='stylesheet' href='../stylesheets/carrinho.css' />
+</head>
+<body>
+	<div class="editarProduto"> 
+		<h2>Você está editando: NOME DO PRODUTO</h2>
+
+		<form action="/products/edit/ID_PRODUTO" method="POST">
+			<div>
+				<label for="name">Nome do produto:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+
+			<div>
+				<label for="price">Preço do produto:</label>
+				<input type="number" id="price" name="price" required>
+			</div>
+
+			<div>
+				<label for="discount">Desconto:</label>
+				<input type="number" id="discount" name="discount" required>
+			</div>
+
+			<div>
+				<label for="category">Categoria:</label>
+				<select name="category" id="category" required>
+					<option value="">Escolher</option>
+					<option value="in-sale">Em oferta</option>
+					<option value="visited" >Últimos adicionados</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="description">Descrição:</label>
+				<textarea name="description" id="description">DESCRIÇÃO DO PRODUTO</textarea>
+			</div>
+
+			<button type="submit">Salvar produto</button>
+		</form>
+	</div>
+    
+</body>	
