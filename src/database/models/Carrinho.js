@@ -5,6 +5,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false,
         },
         data_da_compra: {
             type: dataTypes.DATE,
@@ -41,7 +42,24 @@ module.exports = (sequelize, dataTypes) => {
                 notEmpty: true,
             }
         },
-    }
+        status: {
+            type: dataTypes.ENUM,
+            values: ['pendente', 'pago', 'cancelado'],
+            allowNull: false,
+            defaultValue: 'pendente'
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            allowNull: false,
+            defaultValue: new Date(),
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+            allowNull: false,
+            defaultValue: new Date(),
+        },
+        
+    };
     const config = {
         tableName: 'carrinhos',
         timestamps: false,
@@ -49,12 +67,8 @@ module.exports = (sequelize, dataTypes) => {
     const Carrinho = sequelize.define(alias, columns, config);
 
     Carrinho.associate = function(models) {
-        Carrinho.belongsToMany(models.Produtos, {
-            as: 'produtos',
-            through: 'carrinho',
-            foreignKey: 'id_produto',
-            otherKey: 'id_produto',
-            timestamps: false,
+        Carrinho.belongsTo(models.Users, {
+            foreignKey: 'id_user'
         });
     }
     return Carrinho;

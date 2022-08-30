@@ -13,15 +13,15 @@ const multerStorage = multer.diskStorage({
   }
 })
 
-const fileUpload = multer({ storage: multerStorage, fileFilter: (req, file, cb) => {
+const fileUpload = multer({ storage: multerStorage })
+  /*fileFilter: (req, file, cb) => {
     if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
       cb(null, true);
     } else {
       cb(null, false);
-      return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+      return cb(new Error('Somente arquivos PNG, JPG e JPEG são permitidos!'));
     }
-  }
-});
+  }*/
 
 module.exports = fileUpload
  

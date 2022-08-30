@@ -9,12 +9,14 @@ module.exports = {
         id_produto: 1,
         total: 29.90,
         quantidade: 1,
+        status: 'pendente',
     }, {
         data_da_compra: '2020-07-05',
         id_user: 2,
         id_produto: 2,
         total: 45.00,
         quantidade: 1, 
+        status: 'pendente',
       }
     ]);
   },

@@ -7,6 +7,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
       },
       username: {
         type: Sequelize.STRING,
@@ -29,7 +30,9 @@ module.exports = {
           notEmpty: true,
           isEmail: true,
         },
-        unique: true
+        unique:{
+          args: true
+        }
       },
       password: {
         type: Sequelize.STRING,
@@ -45,6 +48,22 @@ module.exports = {
           notEmpty: true,
         }
       },
+      type: {
+        type: Sequelize.ENUM,
+        values: ['admin', 'user'],
+        allowNull: false,
+        defaultValue: 'user',
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: new Date(),
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: new Date(),
+    },
     });
     
   },
