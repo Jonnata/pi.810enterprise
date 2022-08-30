@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 
 const produtosController = {
+<<<<<<< HEAD
   list: (req, res) => {
     Produtos.findAll({
       include: {
@@ -46,6 +47,25 @@ const produtosController = {
 
     if (extensionFile != 'jpg' && extensionFile != 'png' && extensionFile != 'jpeg') {
       return res.render('productToCreate', { extensionError: 'Somente arquivos PNG, JPG e JPEG são permitidos!' });
+=======
+    renderProdutos: (req, res) => {
+        res.render('produtos', { produtos });
+        },
+
+    adicionarProduto: (req, res) => {
+        const { nome, descricao, preco } = req.body;
+        const novoProduto = {
+            id: produtos.length + 1,
+            nome,
+            descricao,
+            preco
+        };
+        produtos.push(novoProduto);
+        fs.writeFileSync(pathProdutosJSON, JSON.stringify(produtos));
+        res.redirect("/produtos");
+    },
+
+>>>>>>> 5f7fc2c771279a1ccf5ee3fd8eaf5cd9c2600933
     }
 
     Produtos.create({
