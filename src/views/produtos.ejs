@@ -10,16 +10,19 @@
     <div class="giftcards-que-amamos">
       <h3>Gift Cards que amamos</h3>
     </div>
-
+    <% for( let i = 0; i < produtos.length; i++ ) { %>
     <section class="produtos">
-      <% produtos.forEach((produtos) => { %>
+      
       <div class = "produtos-interno">
-      <a href="/produtos/<%= produtos.id %>">
-        <img src="/images/produtos/<%= produtos.image %>" alt="imagem do produto">
+      <a href="/produtos/details/<%= produtos[i].id %>">
+        <img src="/images/produtos/<%= produtos[i].imagem %>" alt="imagem do produto">
       </a>
       </div>
-        <% }) %>
     </section> 
+    <% } %>
+    <a href="/edit"> EDITAR </a>
+            <a href="/produtos/create"> CRIAR</a>
+            <a href="/delete"> DELETAR</a>
     <%- include('./partials/footer') %>
 </body>
 </html>

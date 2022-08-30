@@ -5,10 +5,10 @@ const produtoInternoController = require('../controllers/produtoInternoControlle
 
 
 router.get('/produtointerno', produtoInternoController.renderProdutoInterno);
-router.get('/edit',produtoInternoController.edit )
-router.post('/edit', produtoInternoController.edit)
-router.get('/create',produtoInternoController.create )
-router.post('/create', produtoInternoController.create)
+// router.get('/edit',produtoInternoController.edit )
+// router.post('/edit', produtoInternoController.edit)
+// router.get('/create',produtoInternoController.create )
+// router.post('/create', produtoInternoController.create)
 
 
 module.exports = router;
