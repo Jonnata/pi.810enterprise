@@ -8,36 +8,45 @@
 
   <link rel='stylesheet' href='./stylesheets/style.css' />
 <link rel='stylesheet' href='../stylesheets/produtoInterno.css' />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" >
 </head>
-<body><header>
+<body>
+    <header>
       
-    <div class="logo-header">
-    <img src="./images/logo.svg" alt="Logo 810 enterPrise" />
-    </div>
-
-    <!-- Load icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The form -->
-      <form class="navSearch" action="action_page">
-        <input type="text" placeholder="busque seu produto" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <div class="logo-header">
+        <img src="./images/logo.svg" alt="Logo 810 enterPrise" />
+        </div>
     
-    <nav class="iconeMinhaConta">
-    <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
-    <h1>Douglas</h1>
-    </nav>
-
-  </header>
-  
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- The form -->
+          <form class="navSearch" action="action_page">
+            <input type="text" placeholder="busque seu produto" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        
+        <nav class="iconeMinhaConta">
+        <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
+        <h1>Douglas</h1>
+        </nav>
+    
+      </header>
     <main>
         <section class="detalhes">
-            <div class="produtoDetalhes flex2">
-                <img src="./images/card-ps.png>" alt="Gift Card Playstation R$100">
+            <div class="produtoDetalhes">
+                <img src="./images/card-ps.png" alt="Gift Card Playstation R$100">
                 
                     <article>
-                        <h3> </h3>
+                        <h3>Gift Card Digital Playstation Store R$100</h3>
+                        <div class="rating">
+                            <input type="radio" name="star" id="star1"><label for="star1"></label>
+                            <input type="radio" name="star" id="star2"><label for="star2"></label>
+                            <input type="radio" name="star" id="star3"><label for="star3"></label>
+                            <input type="radio" name="star" id="star4"><label for="star4"></label>
+                            <input type="radio" name="star" id="star5"><label for="star5"></label>
+                        </div>
+
                         <button class="entregaDigital">Entrega Digital</button>
                         <div class="divider"></div>
                         <p></p>
@@ -50,7 +59,7 @@
                     <p>em ate 1x sem juros</p>
                     <a href="/formasdepagamento">Mais formas de pagamento</a>
                     <div class="divider2"></div>
-                    <button class="compras">Comprar</button>
+                    <button class="compras" >Comprar</button>
                 </article>
             </div>
 

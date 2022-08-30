@@ -9,6 +9,7 @@ module.exports = {
         email: 'jonnata@gmail.com',
         password: '12345678', 
         image: 'public/images/painelUsuario/avatar.png',
+        type: 'admin',
       },
       { 
         username: 'Maria Marques',
@@ -16,6 +17,7 @@ module.exports = {
         email: 'maria@gmail.com',
         password: '12345678',
         image: 'public/images/painelUsuario/avatar.png',
+        type: 'user',
       },
       { 
         username: 'Douglas Santos',
@@ -23,6 +25,7 @@ module.exports = {
         email: 'douglas@gmail.com',
         password: '12345678',
         image: 'public/images/painelUsuario/avatar.png',
+        type: 'user',
       },
     ]);
   },

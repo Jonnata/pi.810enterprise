@@ -7,6 +7,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
     },
     data_da_compra: {
         type: Sequelize.DATE,
@@ -42,7 +43,23 @@ module.exports = {
         validate: {
             notEmpty: true,
         }
-      },
+    },
+    status: {
+        type: Sequelize.ENUM,
+        values: ['pendente', 'pago', 'cancelado'],
+        allowNull: false,
+        defaultValue: 'pendente'
+    },
+    created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: new Date(),
+    },
+    updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: new Date(),
+    },
     });
   },
 
