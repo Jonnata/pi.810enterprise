@@ -31,11 +31,7 @@
 
 			<div>
 				<label for="category">Categoria:</label>
-				<select name="category" id="category" required>
-					<option value="">Escolher</option>
-					<option value="in-sale">Em oferta</option>
-					<option value="visited" >Últimos adicionados</option>
-				</select>
+				<input type="text" id="categoria" name="categoria" required>
 			</div>
 
 			<div>
@@ -45,6 +41,14 @@
 
 			<button type="submit">Salvar produto</button>
 		</form>
+
+		<% if(typeof errors !== 'undefined') { %>
+			<ul>
+			  <% errors.forEach(error => { %>
+			  <li><%= error.message %></li>
+			  <% }) %>
+			</ul>
+			<% } %>
+		  
 	</div>
-    
 </body>	

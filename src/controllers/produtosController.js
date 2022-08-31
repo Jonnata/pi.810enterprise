@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 const path = require("path");
 const database = require('../database/models');
@@ -19,7 +20,7 @@ const produtosController = {
           res.render('produtos', { user: userJSON, produtos: produtos }); 
         })
     },
-
 }
+  
 
     module.exports = produtosController;
