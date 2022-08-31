@@ -1,6 +1,7 @@
 const homeController = {
     renderHome: (req, res) => {
-        res.render('home');
+        const userJSON = JSON.parse(req.cookies.user); // transforma o cookie em um objeto
+        res.render('home', { user: userJSON }); // renderiza a página home com o usuário logado
         }
     }
 
