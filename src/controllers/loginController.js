@@ -21,7 +21,11 @@ const loginController = {
       }
 
       if (toRemember || !toRemember) {
-        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email }), { maxAge: 1000 * 60 * 60 * 24 * 7 }); // se o usuário marcar para manter logado, o cookie fica ativo por 7 dias
+        res.cookie('user', JSON.stringify({ 
+          id: user.id, 
+          username: user.username, 
+          email: user.email 
+        }), { maxAge: 1000 * 60 * 60 * 24 * 7 }); // se o usuário marcar para manter logado, o cookie fica ativo por 7 dias
 
         res.render('home', { user });
       }
