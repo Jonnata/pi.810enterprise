@@ -7,7 +7,7 @@ module.exports = {
         username: 'Jonnata Costa',
         date: '1992-10-15',
         email: 'jonnata@gmail.com',
-        password: '12345678',
+        password: '12345678', 
         image: 'public/images/painelUsuario/avatar.png',
         type: 'admin',
       },
