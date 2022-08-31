@@ -2,13 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 const produtoInternoController = require('../controllers/produtoInternoController');
+const multerConfigProduct = require('../utils/multerConfigProduct');
 
 
-router.get('/produtointerno', produtoInternoController.renderProdutoInterno);
-// router.get('/edit',produtoInternoController.edit )
-// router.post('/edit', produtoInternoController.edit)
-// router.get('/create',produtoInternoController.create )
-// router.post('/create', produtoInternoController.create)
+
+
+router.get('/produtoInterno', produtoInternoController.renderProdutoInterno);
+router.get('/productToCreate', produtoInternoController.renderCreateProduct );
+router.post('/productToCreate', multerConfigProduct.single("imagem"), produtoInternoController.createProduct);
 
 
 module.exports = router;
