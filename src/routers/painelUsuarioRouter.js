@@ -7,7 +7,8 @@ router.get('/painelUsuario', painelUsuarioController.renderPainelUsuario);
 router.get('/meuCadastro', painelUsuarioController.renderMeuCadastro);
 //router.post('/meuCadastro/update/:id', moviesController.update);
 
-router.get('/user/delete/:id', painelUsuarioController.viewDeletarConta);
-router.delete('/user/delete/:id', painelUsuarioController.deletarContaDoUsuario);
+router.get('/deleteUser', painelUsuarioController.viewDeletarConta);
+
+router.delete('/deleteUser/:id', painelUsuarioController.deletarContaDoUsuario);
 
 module.exports = router;

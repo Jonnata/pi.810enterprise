@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head', {pageName: 'Meu Cadastro'}) %>
+  <%- include('./partials/head', {pageName: 'Deletar Conta!'}) %>
   <body>
     <div class="main-painel-user" >
         <!-- menu -->
@@ -9,7 +9,7 @@
         <aside class="aside-menu" >
             
             <div class="avatar">
-                <img src="./images/painelUsuario/avatar.png" alt="avatar" />
+                <img src="./images/avatarUsuarios/<%= user.image %>" class="avatarUser" alt="user.image" />
             
                 <div class="nome-usuario">
                     <h1><%= user.username %></h1>
@@ -75,12 +75,11 @@
             <%- include('./partials/btnLogout') %>
         </div>
 
-        <div class="certezaDeletarConta">
-            <p>Tem certeza que deseja deletar sua conta?</p>
-        </div>
+
+            <p class="pergunta-deletar-conta">Tem certeza que deseja deletar sua conta, <%= user.username %> ?</p>
         
         <div class="deletarConta">
-            <%- include('./partials/deletarConta') %>
+            <%- include('./partials/btn-deletarConta') %>
         </div>
 
         <%- include('./partials/footerPainelUsuario') %>

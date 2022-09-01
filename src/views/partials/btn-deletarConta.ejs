@@ -1,4 +1,4 @@
-<a href="/deleteUser">
+<form action="/deleteUser/<%= user.id %>?_method=DELETE" method="POST">
     <button type="submit" class="noselect">
         <span class='text'>Deletar Conta</span>
         <span class="icon">
@@ -7,4 +7,4 @@
             </svg>
         </span>
     </button>
-</a>
+</form>
