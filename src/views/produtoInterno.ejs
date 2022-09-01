@@ -1,88 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>810 enterPrise - produto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Card UI Design</title>
 
+    <!-- Vendor Script -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <link rel='stylesheet' href='./stylesheets/style.css' />
-<link rel='stylesheet' href='../stylesheets/produtoInterno.css' />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" >
+  <link rel='stylesheet' href='../stylesheets/produtoInterno.css' />
 </head>
+
 <body>
-    <header>
-      
-        <div class="logo-header">
-        <img src="./images/logo.svg" alt="Logo 810 enterPrise" />
+    
+    <div class="container">
+        <div class="imgBx">
+          
+            <img src="./images/produtos/<%=produto.imagem%>" alt="<%= produto.nome %>">
         </div>
-    
-        <!-- Load icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- The form -->
-          <form class="navSearch" action="action_page">
-            <input type="text" placeholder="busque seu produto" name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
+        <div class="details">
+            <div class="content">
+                <h2><%= produto.nome %><br>
+                    
+                </h2>
+                <p>
+                    <%= produto.descricao%>
+                </p>
+               
+                <h3>Rs. <%=produto.preco%></h3>
+
+                <button type="submit">Comprar agora</button>
+
+            </div>
+
+           
+            </div>
+        </div> 
         
-        <nav class="iconeMinhaConta">
-        <img src = "./images/icone-minhaConta.svg" alt="Ícone minha conta" />
-        <h1>Douglas</h1>
-        </nav>
+        <div class="configurarProdutos">
+                <a href="/productToCreate">CRIAR</a>
+                <a href="/productToEdit">EDITAR</a>
+                <a href="/productToDelete">DELETAR</a>
+    </div>
     
-      </header>
-    <main>
-        <section class="detalhes">
-            <div class="produtoDetalhes">
-                <img src="./images/card-ps.png" alt="Gift Card Playstation R$100">
-                
-                    <article>
-                        <h3>Gift Card Digital Playstation Store R$100</h3>
-                        <div class="rating">
-                            <input type="radio" name="star" id="star1"><label for="star1"></label>
-                            <input type="radio" name="star" id="star2"><label for="star2"></label>
-                            <input type="radio" name="star" id="star3"><label for="star3"></label>
-                            <input type="radio" name="star" id="star4"><label for="star4"></label>
-                            <input type="radio" name="star" id="star5"><label for="star5"></label>
-                        </div>
-
-                        <button class="entregaDigital">Entrega Digital</button>
-                        <div class="divider"></div>
-                        <p></p>
-                        <a href="/politicaDeTroca">Conheça nossa política de troca</a>
-                    </article></div>
-                    <div class="comprar">
-                <article>
-                    <h4> </h4>
-                    <p>no <strong>cartao de crédito</strong></p>
-                    <p>em ate 1x sem juros</p>
-                    <a href="/formasdepagamento">Mais formas de pagamento</a>
-                    <div class="divider2"></div>
-                    <button class="compras" >Comprar</button>
-                </article>
-            </div>
-
-        </section> 
-       
-        <section class="informacao-dos-produtos">
-            <div class="informacao">
-                <h2>Informação dos Produtos</h2>
-                <div class="detalhesInformacao">
-                    <p>Cartão presente playstation store. Tudo o que você quiser jogar, escolha da maior biblioteca de conteúdo PlayStation no mundo. Adicione crédito à sua carteira digital para resgatar o que quiser na PlayStationStore.
-                        Termos e Condições: O uso deste pin PlayStationStore (Plano) constitui sua aceitação desses termos e de quaisquer termos adicionais disponíveis em playstationnetwork.com/terms-of-service. Pins ativados somente podem ser resgatados por meio da conta mestre da sen, sujeitos a aceitação prévia dos Termos de Serviços e Contrato de Usuário da sen e política de privacidade aplicável, disponível em playstationnetwork.com/terms-of-service. Sistemas PS4, PS3, ps Vita e psp,
-                        separadamente. Sua conta somente aceitará pins aceitos do país indicado em sua conta. O pin não pode ser resgatado em troca de dinheiro, devolvido por dinheiro ou crédito nem usado para outra finalidade. O pin não será substituído se for perdido, destruído ou roubado.</p>
-                        </div>
-                <h2>Ficha Técnica</h2>
-                <div class="ficha-tecnica">
-
-                        
-                </div>
-            </div>
-        </section>    
-            <a href="/edit"> EDITAR </a>
-            <a href="/productToCreate"> CRIAR</a>
-            <a href="/delete"> DELETAR</a>
-    
-    </main>
+ 
 </body>
+
+</html>

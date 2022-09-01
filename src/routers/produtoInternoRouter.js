@@ -7,9 +7,10 @@ const multerConfigProduct = require('../utils/multerConfigProduct');
 
 
 
-router.get('/produtoInterno', produtoInternoController.renderProdutoInterno);
-router.get('/productToCreate', produtoInternoController.renderCreateProduct );
-router.post('/productToCreate', multerConfigProduct.single("imagem"), produtoInternoController.createProduct);
+router.get('/produtoInterno/:id', produtoInternoController.renderProdutoInterno);
+// router.get('/productToCreate', produtoInternoController.renderCreateProduct );
+// router.post('/productToCreate', multerConfigProduct.single("imagem"), produtoInternoController.createProduct);
+// router.get('/productToEdit', produtoInternoController.editProduct )
 
 
 module.exports = router;
