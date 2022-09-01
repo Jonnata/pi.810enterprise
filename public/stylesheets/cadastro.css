@@ -19,7 +19,7 @@ main form input[name="password"]{
     border-radius: 15px;
 }
 
-input[type="file"] {
+input[name="image"] {
     width: 337px;
     font-size: 17px;
     padding: 10px;

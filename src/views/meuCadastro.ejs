@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head', {pageName: 'Meu Cadastro'}) %>
+  <body>
+    <div class="main-painel-user" >
+        <!-- menu -->
+        <%- include('./partials/headerPainelUsuario') %>
+
+        <aside class="aside-menu" >
+            
+            <div class="avatar">
+                <img src="./images/painelUsuario/avatar.png" alt="avatar" />
+            
+                <div class="nome-usuario">
+                    <h1><%= user.username %></h1>
+
+                    <img class="linha-nome-avatar" src="./images/painelUsuario/linha-avatar.png" alt="linha-nome-avatar" />
+                
+                </div>
+            </div>
+
+            <div class="menu-lateral">
+
+                <div class="meucadastro">
+                    <a href="/meuCadastro">
+                        <img src="./images/painelUsuario/meuCadastro.svg" alt="Meu cadastro" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        MEU CADASTRO
+                        
+                    </a>
+                </div>
+
+                <div class="pedidos">
+                    <a href="/painelUsuario">
+                        <img src="./images/painelUsuario/pedidos.svg" alt="Pedidos" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                       
+                        PEDIDOS
+
+                    </a>
+                </div>
+
+                <div class="garantia">
+                    <a href="">
+                        <img src="./images/painelUsuario/garantia.svg" alt="Garantia" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        GARANTIA
+
+                    </a>
+                </div>
+
+                <div class="arrependimento">
+                    <a href="">
+                        <img src="./images/painelUsuario/arrependimento.svg" alt="Arrependimento" />
+                        <img src="./images/painelUsuario/Line-vertical.svg" alt="Linha Vertical" />
+                        
+                        ARREPENDIMENTO
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="atendimento-suporte">
+                <div class="atdmento">Atendimento ao Cliente</div>
+                <div class="canal-sac">Canal SAC:</div> 
+                <div class="telefone">(11)70707-7070</div>
+                <div class="email-atdmento">E-mail:</div>
+                <div class="email-sup">faleconosco@810enterprise.com</div>
+            </div>
+
+        </aside>
+        <div class="btn-Logout">
+            <%- include('./partials/btnLogout') %>
+        </div>
+        <div class="centro-painel-usuario-edit">
+            <%- include('./partials/meuCadastroEdit') %>
+        </div>
+        <div class="deletarConta">
+            <%- include('./partials/deletarConta') %>
+        </div>
+
+        <%- include('./partials/footerPainelUsuario') %>
+    </div>
+</body>
+
+<!--modo dark-->
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+</html>
