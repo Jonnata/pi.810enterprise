@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product Card UI Design</title>
+    <title>810enterPrise - Produto Interno</title>
 
     <!-- Vendor Script -->
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+   
   <link rel='stylesheet' href='./stylesheets/style.css' />
   <link rel='stylesheet' href='../stylesheets/produtoInterno.css' />
+  <link rel='stylesheet' href='../stylesheets/footer.css' />
 </head>
 
 <body>
@@ -21,7 +19,7 @@
     <div class="container">
         <div class="imgBx">
           
-            <img src="./images/produtos/<%=produto.imagem%>" alt="<%= produto.nome %>">
+            <img src="/images/produtos/<%=produto.imagem%>" alt="<%= produto.nome %>">
         </div>
         <div class="details">
             <div class="content">
@@ -39,16 +37,16 @@
             </div>
 
            
-            </div>
+            </div>  <div class="configurarProdutos">
+                <a href="/productToCreate">CRIAR</a>
+                <a href="/productToEdit/<%= produto.id %>?_method=PUT">EDITAR</a>
+                <a href="/productToDelete/<%= produto.id %>">DELETAR</a>
+                
+    <div class="alinhar">
+    <%- include('./partials/footer') %></div></div>
         </div> 
         
-        <div class="configurarProdutos">
-                <a href="/productToCreate">CRIAR</a>
-                <a href="/productToEdit">EDITAR</a>
-                <a href="/productToDelete">DELETAR</a>
-    </div>
-    
- 
-</body>
+      
+        </body>
 
 </html>
