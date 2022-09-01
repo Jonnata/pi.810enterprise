@@ -1,0 +1,88 @@
+
+<div class="containerMeuCadastro">
+    <form>
+      <div class="row">
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Primeiro Nome"/>
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="email" placeholder="Email"/>
+          <div class="input-icon"><i class="fa fa-envelope"></i></div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="password" placeholder="Senha"/>
+          <div class="input-icon"><i class="fa fa-key"></i></div>
+        </div>
+        <div class="input-group input-group-icon">
+            <input type="file" name="imageAvatar" id="image"/>
+            <div class="input-icon"><i class="fa fa-key"></i></div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-half">
+          <h4>Date de Aniversário</h4>
+          <div class="input-group">
+            <div class="col-third">
+              <input type="text" id="birth-date" placeholder="DD/MM/YYYY"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-half">
+          <h4>Gênero</h4>
+          <div class="input-group">
+            <input id="gender-male" type="radio" name="gender" value="male"/>
+            <label for="gender-male">Masculino</label>
+            <input id="gender-female" type="radio" name="gender" value="female"/>
+            <label for="gender-female">Feminino</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Pagamento</h4>
+        <div class="input-group">
+          <input id="payment-method-card" type="radio" name="payment-method" value="card" checked="true"/>
+          <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+          <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal"/>
+          <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Número do Cartão"/>
+          <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+        </div>
+        <div class="col-half">
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Card CVC"/>
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+        </div>
+        <div class="col-half">
+          <div class="input-group">
+            <select>
+              <option>01 Jan</option>
+              <option>02 Jan</option>
+            </select>
+            <select>
+              <option>2025</option>
+              <option>2027</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a href="#" class="cta">
+            <span>Alterar Cadastro</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </a>
+      </div>
+    </form>
+  </div>
+
+<!--  <script>
+    $(document).ready(function(){
+$('#birth-date').mask('00/00/0000');
+})
+</script>-->

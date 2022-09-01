@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %>
+  <%- include('./partials/head', {pageName: 'Página Inicial'}) %>
   <body>
     <!-- menu -->
     <%- include('./partials/header') %>
@@ -258,9 +258,9 @@
           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
         </div>
       </div>
-
-
     </div>
+    
+    <%- include('./partials/redesSociais') %>
 
     <div class="back-to-top" href="#">
       <script>
