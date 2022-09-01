@@ -7,5 +7,4 @@ router.get('/cadastro', cadastroController.renderCadastro);
 
 router.post('/cadastro', multerConfig.single('image'), cadastroController.createUser);
 
-
 module.exports = router;

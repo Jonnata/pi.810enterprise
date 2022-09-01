@@ -17,6 +17,8 @@ const loginRouter = require('./src/routers/loginRouter');
 const cadastroRouter = require('./src/routers/cadastroRouter');
 const painelUsuarioRouter = require('./src/routers/painelUsuarioRouter');
 const compraFinalizadaRouter = require('./src/routers/compraFinalizadaRouter');
+const logoutRouter = require('./src/routers/logoutRouter');
+
 const logMiddleware = require("./src/middlewares/log");
 
 const app = express();
@@ -56,6 +58,7 @@ app.use(loginRouter);
 app.use(cadastroRouter);
 app.use(painelUsuarioRouter);
 app.use(compraFinalizadaRouter);
+app.use(logoutRouter);
 
 
 app.use((req, res) => {
