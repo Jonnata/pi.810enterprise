@@ -68,3 +68,9 @@
   .noselect:focus {
       outline: none;
   }
+
+.pergunta-deletar-conta{
+    font-size: 39px;
+    position: relative;
+    align-self: center;
+}

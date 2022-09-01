@@ -79,11 +79,13 @@ header nav ul li{
   }
 
 .iconeMinhaConta img {
-    width: 199px;
-    height: 64px;
-    background-blend-mode: lighten;
-    filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
+  width: 121px;
+  height: 119px;
+  background-blend-mode: lighten;
+  filter: drop-shadow(10px 20px 7px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+  border-radius: 28%;
+  object-fit: cover;
 }
 
 .iconeMinhaConta h1 {
@@ -115,4 +117,3 @@ header nav ul li{
   color: #FFFFFF;
   font-weight: bold;
 }
-

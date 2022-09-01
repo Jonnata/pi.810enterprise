@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const path = require('path');
 
 const Usuarios = db.User;
 
@@ -14,24 +15,23 @@ const painelUsuarioController = {
         },
         
     viewDeletarConta: function (req,res) {
-        const idJSON = JSON.parse(req.params.id);
-        console.log(idJSON);
-            Usuarios
-            .findByPk(idJSON)
-            .then(User => {
-                return res.render('certezaDeletarConta', { user: idJSON });
-            })
-            .catch(error => res.send(error))
+        //const idJSON = JSON.parse(req.cookies.user).id
+        //console.log(idJSON);
+        const userJSON = JSON.parse(req.cookies.user);
+        res.render('certezaDeletarConta', { user: userJSON });
         },
 
-    deletarContaDoUsuario:  function (req, res) {
-            let userId = req.params.id; // pega o id do usuário que está na url
-            Usuarios
-            .destroy({where: {id: userId}, force: true}) // force: true é necessário para usar o destroy
-            .then(()=>{
-                return res.redirect('/cadastro')})
-            .catch(error => res.send(error)) 
-        },
+    deletarContaDoUsuario:  (req, res) => {
+        db.Users
+        .destroy({
+            where: {
+                id: req.params.id
+            },
+            force: true
+        }).then(() => {
+            return res.redirect('/cadastro');
+        }).catch(error => res.send(error))
+        }
     }
 
     module.exports = painelUsuarioController;
