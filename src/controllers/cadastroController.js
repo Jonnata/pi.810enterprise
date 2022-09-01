@@ -1,9 +1,13 @@
 const { Users } = require('../database/models');
+const db = require('../database/models');
 const bcrypt = require('bcrypt');
 const validandoCadastroSchema = require('../Schemas/validandoCadastroSchema');
 const path = require('path');
 const fs = require('fs');
 const multerConfig = require('../utils/multerConfig');
+
+
+const Userss = db.User;
 
 /*const pathUsersJSON = path.join(
   __dirname,
@@ -60,10 +64,6 @@ const cadastroController = {
               else console.log('Arquivo deletado com sucesso!');
            });
           },
-
-          
-
-
           
     }
 
