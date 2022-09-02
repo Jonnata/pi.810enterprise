@@ -1,12 +1,12 @@
 <div class="containerMeuCadastro">
-    <form>
+    <form action="/meuCadastro/<%= user.id %>?_method=POST" method="POST">
       <div class="row">
         <div class="input-group input-group-icon">
-          <input type="text" placeholder="Primeiro Nome"/>
+          <input type="text"  value="<%= user.username %>" placeholder="Primeiro Nome"/>
           <div class="input-icon"><i class="fa fa-user"></i></div>
         </div>
         <div class="input-group input-group-icon">
-          <input type="email" placeholder="Email"/>
+          <input type="email" value="<%= user.email %>" placeholder="Email"/>
           <div class="input-icon"><i class="fa fa-envelope"></i></div>
         </div>
         <div class="input-group input-group-icon">
@@ -23,7 +23,7 @@
           <h4>Date de Aniversário</h4>
           <div class="input-group">
             <div class="col-third">
-              <input type="text" id="birth-date" placeholder="DD/MM/YYYY"/>
+              <input type="text" value="<%= user.date %>" id="birth-date" placeholder="DD/MM/YYYY"/>
             </div>
           </div>
         </div>
@@ -69,13 +69,13 @@
         </div>
       </div>
       <div class="row">
-        <a href="#" class="cta">
+        <button type="submit" class="cta">
             <span>Alterar Cadastro</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </a>
+          </button>
       </div>
     </form>
   </div>
