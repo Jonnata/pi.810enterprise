@@ -38,3 +38,6 @@ border-radius: 20px;
     width: 492px;
     justify-content: center;
 }
+.produtos-interno img{
+    max-width: 100%;
+}

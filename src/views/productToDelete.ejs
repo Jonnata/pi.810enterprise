@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar o filme</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel='stylesheet' href='../stylesheets/productToDelete.css' />
 </head>
 
 <body>
+    <div class="formulario">
     <h1>Tem certeza que deseja deletar esse produto: <%= produto.nome %>???</h1>
     <p>
         <form action="/productToDelete/<%= produto.id %>" method="POST">
@@ -19,7 +21,7 @@
 
         </form>
     </p>
-    
+    </div>
 </body>
 
 </html>

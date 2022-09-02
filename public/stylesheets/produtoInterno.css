@@ -47,9 +47,10 @@ body {
 .container .imgBx img {
     position: relative;
     width: 700px;
+    max-width: 100%;
     transform: rotate(-30deg);
     left: -50px;
-    transition: .9s linear;
+    transition: .10s linear;
 }
 
 .container .details {
@@ -98,7 +99,13 @@ body {
     font-weight: 600;
     border-radius: 40px;
     float: right;
+    cursor: pointer;
+    transition: background-color 6.45ms;
 }
+.container .details button:hover{
+    background-color: #242238;
+  }
+
 
 .configurarProdutos{
     box-sizing: border-box;
@@ -111,31 +118,3 @@ body {
     box-sizing: border-box;
 }
 
-/* responsive */
-@media (max-width: 1080px) {
-    .container {
-        height: auto;
-    }
-    .container .imgBx {
-        padding: 40px;
-        box-sizing: border-box;
-        width: 100% ;
-        height: auto;
-        text-align: center;
-        overflow: hidden;
-    }
-    .container .imgBx img {
-        left: initial;
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
-    .details {
-        width: 100% ;
-        height: auto;
-        padding: 20px;
-    }
-    .container .details p {
-        margin-left: 0;
-        max-width: 100%;
-    }
-}

@@ -12,11 +12,72 @@
   <link rel='stylesheet' href='./stylesheets/style.css' />
   <link rel='stylesheet' href='../stylesheets/produtoInterno.css' />
   <link rel='stylesheet' href='../stylesheets/footer.css' />
-</head>
+  <link rel='stylesheet' href='../stylesheets/header.css' />
 
-<body>
+</head>
+<div vw class="enabled">
+    <style>
+      [vw] [vw-access-button] .access-button {
+        width: 43%;
+      }
+    </style>
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
     
+  </script>
+<body>
+  <header>
+    <style>
+      header{
+        margin-top: -730px;
+      }
+    </style>
+      
+    <div class="logo-header">
+      <a href="/home">
+    <img src="/images/logo-810enterPrise.png" alt="Logo 810 enterPrise" /></a>
+    </div>
+
+    <div class="bem-vindo">
+    <a>Bem vindo(a), 
+      <strong>
+        maria
+      </strong>
+    </a>
+
+<!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+      <form class="navSearch" action="action_page">
+        <input type="text" placeholder="Busque seu produto" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <div class="menu-header">
+      <nav class="iconeMinhaConta">
+        <a href="/painelUsuario">
+          <img src="/images/icone-minhaConta.svg" class="avatarUserHeaderHome" alt="user.image" />
+          </a>
+    </nav>
+
+    <nav class="iconeCarrinho">
+    <img src = "/images/Carrinho.svg" alt = "Ícone Carrinho de Compra" />
+    <h1>MEUS PEDIDOS</h1>
+    </nav>
+    </div>
+
+  </header>
     <div class="container">
+
         <div class="imgBx">
           
             <img src="/images/produtos/<%=produto.imagem%>" alt="<%= produto.nome %>">
@@ -32,7 +93,9 @@
                
                 <h3>Rs. <%=produto.preco%></h3>
 
-                <button type="submit">Comprar agora</button>
+                <a href="/carrinho">
+                <button type="submit">Comprar agora</button></a>
+
 
             </div>
 
@@ -41,6 +104,7 @@
                 <a href="/productToCreate">CRIAR</a>
                 <a href="/productToEdit/<%= produto.id %>?_method=PUT">EDITAR</a>
                 <a href="/productToDelete/<%= produto.id %>">DELETAR</a>
+                <a href="/produtos">VOLTAR</a>
                 
     <div class="alinhar">
     <%- include('./partials/footer') %></div></div>
