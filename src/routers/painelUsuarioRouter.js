@@ -5,6 +5,7 @@ const painelUsuarioController = require('../controllers/painelUsuarioController'
 router.get('/painelUsuario', painelUsuarioController.renderPainelUsuario);
 
 router.get('/meuCadastro', painelUsuarioController.renderMeuCadastro);
+//router.get('/meuCadastro/:id', painelUsuarioController.editMeuCadastro);
 
 router.put('/meuCadastro/:id', painelUsuarioController.updateCadastroUsuario);
 

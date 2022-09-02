@@ -17,6 +17,30 @@ module.exports = {
         imagem: 'uber.png',
         categoria: 'Transporte',
       
+      }, {
+        nome: 'Gift Card Digital Ifood',
+        descricao: 'O Cartão Ifood é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para pedir comida no Ifood. O Cartão Ifood é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para pedir comida no Ifood.',
+        preco: 50.00,
+        imagem: 'ifood.png',
+        categoria: 'Alimentação',
+      }, {
+        nome: 'Gift Card Digital Steam',
+        descricao: 'O Cartão Steam é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar jogos na Steam. O Cartão Steam é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar jogos na Steam.',
+        preco: 43.00,
+        imagem: 'steam.png',
+        categoria: 'Jogos',
+      }, {
+        nome: 'Gift Card Digital Assai',
+        descricao: 'O Cartão Assai é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar na Assai. O Cartão Assai é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar na Assai.',
+        preco: 70.00,
+        imagem: 'assai.png',
+        categoria: 'Mercado',
+      }, {
+        nome: 'Gift Card Digital Google Play',
+        descricao: 'O Cartão Google Play é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar na Google Play. O Cartão Google Play é uma ótima opção para presentear quem você ama. Com ele, você pode presentear alguém com créditos para comprar na Google Play.',
+        preco: 25.00,
+        imagem: 'gp.png',
+        categoria: 'Jogos',
       }
     ]);
   },

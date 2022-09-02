@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const homeController = require('../controllers/homeController')
-const auth = require('../middlewares/auth')
-
+const verifyIfUserIsLoggedIn = require('../middlewares/verifyIfUserIsLoggedIn')
 
 //router.use(verifyIfUserIsLoggedIn)
-router.get('/', homeController.renderHome)
-router.get('/home', homeController.renderHome)
+router.get('/', verifyIfUserIsLoggedIn, homeController.renderHome)
+router.get('/home',verifyIfUserIsLoggedIn, homeController.renderHome)
 
 module.exports = router;

@@ -1,5 +1,5 @@
 <div class="containerMeuCadastro">
-    <form action="/meuCadastro/<%= user.id %>?_method=POST" method="POST">
+    <form action="/meuCadastro/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
       <div class="row">
         <div class="input-group input-group-icon">
           <input type="text"  value="<%= user.username %>" placeholder="Primeiro Nome"/>
@@ -69,13 +69,13 @@
         </div>
       </div>
       <div class="row">
-        <button type="submit" class="cta">
+        <a type="submit" class="cta">
             <span>Alterar Cadastro</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </button>
+          </a>
       </div>
     </form>
   </div>
