@@ -31,6 +31,26 @@ const painelUsuarioController = {
         }).then(() => {
             return res.redirect('/cadastro');
         }).catch(error => res.send(error))
+        },
+    
+    updateCadastroUsuario: (req, res) => {
+
+        const userId = req.params.id;
+        const { username, date, email, image } = req.body;
+
+        db.Users
+        .update({
+            username,
+            date,
+            email,
+            image,
+        }, {
+            where: {
+                id: userId
+            }
+        }).then(() => {
+            return res.redirect('/painelUsuario');
+        }).catch(error => res.send(error))
         }
     }
 
