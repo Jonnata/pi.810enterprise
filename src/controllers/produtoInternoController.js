@@ -1,20 +1,21 @@
-const { Produtos } = require('../database/models');
+const { Produtos, Users } = require('../database/models');
 const createProductSchema = require('../Schemas/createProductSchema');
 
 
 
 const produtoInternoController = {
   renderProdutoInterno: (req, res) => {
-    
     const { id } = req.params;
+
     Produtos.findByPk(id).then(produto => {
-      res.render('produtoInterno', { produto: produto })
+      res.render('produtoInterno', {produto: produto })
     })
   },
   renderCreateProduct: (req,res)=> {
       res.render('productToCreate')
 },
   createProduct: async (req, res) => {
+
   const { nome, preco, categoria, descricao } = req.body;
   const produto = Produtos.findOne({ where: { nome } });
 
